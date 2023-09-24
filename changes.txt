@@ -1,0 +1,25 @@
+******************************************************
+					File Edits
+******************************************************
+26th march-2019
+----------------------
+	Migrations added 	- 	AddMinamountToCoupons
+	-Add nullable integer column "min_order_amount" 
+
+	Public
+	-----------------
+	custom.css 			-	admin/css/
+	style.css			-	front/css/	
+
+	Views
+	-----------------
+		add.blade.php 	- 	admin/pages/coupons/
+		edit.blade.php 	- 	admin/pages/coupons/
+		online_shop.blade.php  - pages/front
+		message.blade.php	-	vendor/flash/
+
+	Controllers
+	-----------------
+		CouponController - 	admin/
+		UserController   - 	/
+		

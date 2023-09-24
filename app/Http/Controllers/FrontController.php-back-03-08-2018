@@ -1,0 +1,82 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Content;
+use App\Models\Country;
+use Illuminate\Http\Request;
+
+class FrontController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function features()
+    {
+        return view('pages.front.features');
+    }
+
+    public function about()
+    {
+    	return view('pages.front.about');
+    }
+
+    public function online_shop(Request $request, $type = "buy")
+    {
+        $countries = Country::orderBy('name')->get();
+        if(!empty($request->amount && $request->card_number)){
+            return view('pages.front.online_shop', ['countries' => $countries, 'set_reload_amount' => true, 'reload_amount' => $request->amount, 'reload_number' => $request->card_number]);
+        }
+    	return view('pages.front.online_shop', ['countries' => $countries, 'set_reload_amount' => false, 'select_type' => $type]);
+    }
+
+    public function support()
+    {
+    	return view('pages.front.support');
+    }
+
+    public function reseller()
+    {
+        return view('pages.front.reseller');
+    }
+
+    public function press()
+    {
+        return view('pages.front.press');
+    }
+
+    public function press_inner()
+    {
+        return view('pages.front.press_inner');
+    }
+
+    public function general_sales()
+    {
+        $content = Content::where('constant', 'sales')->value('content');
+        return view('pages.front.general_sales', ['page_content' => $content]);
+    }
+
+    public function privacy_policy()
+    {
+        $content = Content::where('constant', 'privacy')->value('content');
+        return view('pages.front.privacy_policy', ['page_content' => $content]);
+    }
+
+    public function terms()
+    {
+        $content = Content::where('constant', 'terms')->value('content');
+        return view('pages.front.terms', ['page_content' => $content]);
+    }
+}

@@ -1,0 +1,13 @@
+.date-filter-btn{
+    display: inline-block;
+    padding: 0px 20px;
+    background: #494864;
+    font-size: 14px;
+    line-height: 35px;
+    border-radius: 2em;
+    color: #fff;
+    text-align: center;
+    border: none;
+    text-transform: capitalize;
+    font-family: 'Calibri Light';
+}

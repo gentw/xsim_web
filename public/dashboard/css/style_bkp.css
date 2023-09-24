@@ -1,0 +1,1047 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700');
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('../fonts/SegoeUI.eot');
+    src: url('../fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SegoeUI.woff2') format('woff2'),
+        url('../fonts/SegoeUI.woff') format('woff'),
+        url('../fonts/SegoeUI.ttf') format('truetype'),
+        url('../fonts/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calibri Light';
+    src: url('../fonts/Calibri-Light.eot');
+    src: url('../fonts/Calibri-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-Light.woff2') format('woff2'),
+        url('../fonts/Calibri-Light.woff') format('woff'),
+        url('../fonts/Calibri-Light.ttf') format('truetype'),
+        url('../fonts/Calibri-Light.svg#Calibri-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri Bold';
+    src: url('../fonts/Calibri-Bold.eot');
+    src: url('../fonts/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri-Bold.woff2') format('woff2'),
+        url('../fonts/Calibri-Bold.woff') format('woff'),
+        url('../fonts/Calibri-Bold.ttf') format('truetype'),
+        url('../fonts/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri.eot');
+    src: url('../fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Calibri.woff2') format('woff2'),
+        url('../fonts/Calibri.woff') format('woff'),
+        url('../fonts/Calibri.ttf') format('truetype'),
+        url('../fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+*							{ margin: 0px; padding: 0px;}
+body						{ font-family: 'Poppins', sans-serif; font-size:15px; line-height: 17px; color: #494864; font-weight: 300;}
+.clear						{ clear:both;}
+img							{ border: 0px;}
+ul,ol						{ list-style: none;}
+a							{ text-decoration: none; outline: none; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; }
+a:hover, a:focus, a:active,a:visited	{ outline: none; border: 0px; text-decoration: none;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6    { font-family: 'Poppins', sans-serif;}
+h1							{ margin: 0px 0px 9px; font-size: 63px; line-height: 76px; font-weight: 300; text-align: center;}
+h2							{}
+h3							{ font-size: 26px; line-height: 31px; font-weight: 300;}
+h4							{}
+p							{}
+.simple-shadow p,
+.shadow-box.small p         { font-size:15px; }
+button                      { transition: all 0.5s ease; -webkit-transition: all 0.5s ease;}
+.border-none				{ border: none !important; }
+.bg-none					{ background: none !important;}
+.margint-none				{ margin-top: 0px !important;}
+.marginr-none				{ margin-right: 0px !important;}
+.marginb-none				{ margin-bottom: 0px !important;}
+.marginl-none				{ margin-left: 0px !important;}
+.paddingt-none				{ padding-top: 0px !important;}
+.paddingr-none				{ padding-right: 0px !important;}
+.paddingb-none				{ padding-bottom: 0px !important;}
+.paddingl-none				{ padding-left: 0px !important;}
+img 						{ max-width: 100%;}
+.simple-btn                 { display: inline-block; padding: 0px 20px; min-width: 185px; background: #494864; font-size: 14px; line-height: 45px; color: #fff; text-align: center; border: none; text-transform: capitalize;  font-family: 'Calibri Light';}
+.simple-btn.yellow          { background: #FFD000; color: #494864; border-radius: 2em;}
+.simple-btn:hover,
+.simple-btn:focus           { background: #FFD000; color: #494864; border: none;}
+.simple-btn.yellow:hover    { background: #494864; color: #FFF; border: none;}
+.simple-btn.round           { border-radius: 2em;}
+.simple-btn.full            { width: 100%;}
+.form-control               { box-shadow: none; -webkit-box-shadow: none;}
+.simple-shadow              { box-shadow: 0px 5px 20px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 5px 20px rgba(0,0,0,0.16); }
+.google-translate           {background-color: #2A2E3A; text-align: right; padding: 6px 15px;}
+/*dropdown style*/
+.select2.select2-container--default                             { width: auto !important; }
+.select2.select2-container--default .select2-selection--single  { border: none; border-radius: 0; height: auto;}
+.select2.select2-container--default .select2-selection--single .select2-selection__arrow    { display: none; }
+.select2-container.select2-container--default .select2-results__option--highlighted[aria-selected] { background: #efefef; text-align: center; color: #000;}
+.select2-container.select2-container--default .select2-results__option { border-radius: 22px; padding: 15px 10px; }
+.select2-dropdown.select2-dropdown--below                       { padding: 10px 0 0; border-radius: 22px; overflow: hidden; border-color: #EFEFEF;}
+.select2-container--default .select2-search--dropdown .select2-search__field    { border-radius: 22px; }
+.jcf-select,
+.select2.select2-container--default .select2-selection--single .select2-selection__rendered    { height: auto; background: #EFEFEF; border: 0.25px solid rgba(149,152,154,0.53); border-radius: 2em; text-align: center; box-shadow: 0px 3px 6px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16);}
+.select2.select2-container--default .select2-selection--single .select2-selection__rendered    { padding: 7px 30px 7px 8px ; background: #efefef url("../images/down-arrow-dark.png") no-repeat 90% center; }
+.jcf-select .jcf-select-text        { margin: 0 30px 0 8px; font-size: 14.71px; line-height: 44px;}
+.jcf-select .jcf-select-opener      { width: 30px; background: transparent url("../images/down-arrow-dark.png") no-repeat left center;}
+.jcf-select-drop .jcf-select-drop-content   { border-color: #EFEFEF; border-radius: 22px; overflow: hidden; }
+.jcf-list .jcf-option               { line-height: 30px;  border-radius: 2em; }
+.jcf-list .jcf-option.jcf-hover     { background: #EFEFEF;}
+.jcf-checkbox                       { height: 44px; width: 44px; border-radius: 50%; background: #EFEFEF; border: 0.25px solid #95989A; box-shadow: 0px 3px 6px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16); }
+.jcf-checkbox.jcf-checked span      { display: none;}
+.jcf-checkbox.jcf-checked           { background: #EFEFEF url("../images/checkmark.png") no-repeat center center; }
+
+#frm-profile h3.space-below         { margin-bottom: 20px; }
+/******* Common Element CSS End *********/
+
+/******* Header Section CSS Start *******/
+header                                              { padding-top: 113px; }
+.navbar-default.dashboard,
+.google-translate.dashboard 						{ z-index: 1051; position: fixed; top: 0px; width: 100%; margin-bottom: 0px; background: #2A2E3A; border: 0px; border-radius: 0px; font-family: 'Poppins', sans-serif;}
+.modal-open .navbar-default.dashboard,
+.modal-open .google-translate.dashboard             { z-index: 1000; }
+.navbar-default.dashboard                           { top: 37px; }
+.navbar-default.dashboard .navbar-brand 			{ margin: 21px 0px 0px 54px; padding: 0px; height: auto; }
+#sideNavbar 										    { padding: 0; text-align: center; }
+#sideNavbar .navbar-nav.main-menu	 				            { float: none; display: inline-block; margin-bottom: -5px;  }
+.navbar-default.dashboard .navbar-nav.login-menu 			{ background: rgba(25,27,33,0.38); }
+.navbar-default.dashboard .navbar-nav.main-menu > li > a 	{ margin: 0px 20px; padding: 30px 0px; font-size: 15px; line-height: 17px; font-weight: 700; color: #fff; text-transform: uppercase; }
+.navbar-default.dashboard .navbar-nav.main-menu > .active > a, 
+.navbar-default.dashboard .navbar-nav.main-menu > .active > a:hover, 
+.navbar-default.dashboard .navbar-nav.main-menu > .active > a:focus,
+.navbar-default.dashboard .navbar-nav.main-menu > li > a:hover,
+.navbar-default.dashboard .navbar-nav.main-menu > li > a:focus 			{ background: transparent; color: #FFD000; }
+.navbar-default.dashboard .navbar-nav.login-menu > li > a 		{ padding: 27px 15px; font-size: 10px; line-height: 14px; color: rgba(255,255,255,0.4); font-weight: 300; }
+.navbar-default.dashboard .navbar-nav.login-menu > li:nth-child(2) > a	{ background: rgba(25,27,33,0.18); }
+.navbar-default.dashboard .navbar-nav.login-menu > li:nth-child(3) > a	{ padding-left: 34px; padding-right: 44px; background: rgba(25,27,33,0.7); }
+.navbar-default.dashboard .navbar-nav.login-menu > li > a span 	{ margin-left: 10px;}
+.navbar-default.dashboard .navbar-nav.login-menu > li > a:hover 	{ background: #232630; color: rgba(255,255,255,1);   }
+/******* Header Section CSS End *********/
+
+/******* Sidebar Section CSS Start *******/
+#sidebar-wrapper                    { background: #282737; text-align: center;}
+#sidebar-wrapper .user-info         { padding: 85px 0px 92px;}
+#sidebar-wrapper .user-info h2      { margin: 0px; font-size: 34px; line-height: 40px; color: #fff; text-transform: capitalize; font-family: 'Calibri'; }
+#sidebar-wrapper .user-info p.type  { font-size: 12px; line-height: 25px; color: #FFD000;}
+#sidebar-wrapper .jcf-select        { width: 185px; background: #FFD000; border: none;}
+#sidebar-wrapper .jcf-select-text   { font-size: 14px;}
+#sidebar-wrapper .sidebar-menu      { margin: 36px 0px 10px;}
+#sidebar-wrapper .sidebar-menu li a { padding: 9px; display: block; color: #fff; text-transform: capitalize;}
+#sidebar-wrapper .sidebar-menu li a:hover,
+#sidebar-wrapper .sidebar-menu li.active a      { color: #FFD000;}
+#sidebar-wrapper .sidebar-bottom-menu           { padding: 0px; margin: 0px; width: 100%; position: sticky; position: -webkit-sticky; bottom: 0px; left: 0px; background: #22222E;}
+#sidebar-wrapper .sidebar-bottom-menu .icon     { margin-right: 24px;}
+#sidebar-wrapper .sidebar-bottom-menu li a      { display: block; padding: 9px 49px; color: rgba(255,255,255,0.4); background: #22222E; font-size: 10px; line-height: 12px; text-align: left;}
+#sidebar-wrapper .sidebar-bottom-menu li a:hover{ color: rgba(255,255,255,1);}
+#sidebar-wrapper .sidebar-menu.tool-menu        { border-top: 2px solid #1C1D20; }
+
+#sidebar-wrapper.double-menu .user-info         { padding: 30px 0px 5px;}
+#sidebar-wrapper.double-menu .sidebar-menu      { margin: 0px 0px 15px;}
+#sidebar-wrapper.double-menu .title             { color: rgba(255,255,255,0.19) !important;}
+#sidebar-wrapper.double-menu .sidebar-menu.tool-menu    { padding-top: 15px;}
+/******* Sidebar Section CSS End *******/
+
+/******* Middle section CSS Start ******/
+.shadow-box                         { height: 468px; box-shadow: 0px 5px 20px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 5px 20px rgba(0,0,0,0.16); }
+.shadow-box.small                   { height: 370px;}
+.common-number-section              { box-shadow: 0px 1px 20px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 1px 20px rgba(0,0,0,0.16); padding: 10px; margin-bottom: 10px;}
+.common-number-section .jcf-select  { margin: 0;}
+/* Current Balance Block CSS */
+.current-balance-block              { padding: 30px 25px 30px 45px;}
+.current-balance-block p            { margin: 0px; display: inline-block; line-height: 45px; text-transform: capitalize;}
+.current-balance-block .jcf-select  { float: right; min-width: 254px;  }
+.current-balance-block .jcf-select-text         { margin: 0px 50px 0px 35px; }
+.current-balance-block h1           { margin: 55px 0; font-size: 60px; line-height: 80px; font-weight: 300;}
+.title-block                        { margin-bottom: 10px;}
+.title-block p                      { margin: 15px 0 0px;}
+.data-block .shadow-box .date-filter   { margin: 0 -26px 10px -32px;}
+.date-filter                        { padding: 15px 25px; box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.16); margin-bottom: 10px;}
+.date-filter .form-control          { padding: 0 15px; width: 100%; background: transparent; font-size: 12px; line-height: 22px; font-weight: bold; font-family: "Poppins",sans-serif;  color: #494864;}
+.date-filter .form-control::-moz-placeholder { color: #494864; }
+.date-filter .form-control:-ms-input-placeholder { color: #494864; }
+.date-filter .form-control::-o-placeholder { color: #494864; }
+.date-filter .form-control::-webkit-input-placeholder { color: #494864; }
+.date-filter .input-group-addon     { background-color: #EFEFEF; border: none; height: 21px; width: 21px; border-radius: 50%;  padding: 0; position: relative;}
+.date-filter .input-group-addon::after           { margin: 0 auto; display: block;background: url(../images/down-arrow-dark.png) no-repeat center; height: 5px; width: 8px; background-size: cover; content: "";}
+.date-filter .form-control          { padding: 0; max-width: 100px; }
+.date-filter > ul > li              { display: inline-block; padding: 0 5px; vertical-align: middle;}
+.date-filter ul,                    
+.date-filter .form-group            { margin: 0;}
+.data-block                         { margin-bottom: 49px; }
+.data-block .shadow-box,
+.add-remove-block-function .add-remove-block.simple-shadow.small,
+.add-remove-block-function .add-remove-list-block,
+.jcf-scrollable-wrapper              { height: 100% !important; }
+.common-modal                           { text-align: center;}
+.common-modal .modal-header, .common-modal .modal-footer        { border: none;}
+.common-modal .modal-footer          { text-align: center;}
+.common-modal .btn                   { font-size: 14px; font-family: "Poppins"; padding: 12px 50px; border-radius: 40px; border: 1px solid transparent;}
+.common-modal .btn:not(.btn-confirm) { background-color: #ccc;}
+.common-modal .btn:not(.btn-confirm):hover { border-color: #ccc; background: transparent; }
+.common-modal .btn-confirm           { background-color: #FFD000;}
+.common-modal .btn-confirm:hover    { border-color: #FFD000; background: transparent;}
+.common-modal .modal-body p         { font-size: 17px; line-height: 25px;}
+.common-modal form                  { margin-top: 30px; }
+.common-modal label                 { font-weight: 300; margin-bottom: 15px; }
+.common-modal .form-control         { background: #FBFBFE; width: auto; margin: 0 auto; border: 1px solid #D6D9ED; border-radius: 40px; padding: 13px 20px; line-height: 20px;}
+.common-modal .edit-img             { text-align: center; margin-bottom: 15px;}   
+.common-modal .edit-img img         { width: 25px;}
+.reload-amt .jcf-select             { width: 100%; border: 0px; margin: 10px 0 25px; padding: 0 20px; background: #fbfbfe; border: 1px solid #d6d9ed; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; height: 60px; border-radius: 0; text-align: left;}
+.reload-amt .jcf-select-text        { font-size: 19px; line-height: 23px; margin: 0; font-size: 16px; line-height: 60px; }
+.reload-amt .jcf-select-opener      { width: 58px; background: url("../images/down-arrow.png") no-repeat center 54%;  }
+.reload-amt .jcf-select-drop-content  { border: 0px; box-shadow: 0px 0px 4px #cdcdcd; -webkit-box-shadow: 0px 0px 4px #cdcdcd; border-radius: 0;}
+.reload-amt .jcf-option               { padding: 14px 22px; font-size: 16px; line-height: 20px; border-radius: 0; }
+.reload-amt .jcf-select .jcf-option-hideme { color: rgba(189, 188, 199, 0.56); }
+/* History Block CSS */
+.history-block                      { padding: 30px 26px 30px 32px; height: 468px !important; width: 100% !important;}
+.history-block .title               { display: inline-block;}
+.history-block .top-menu-list       { float: right; font-family: Segoe UI; font-size: 13px;}
+.history-block .top-menu-list a     { margin: 0px 15px; color: #AFAFAF; font-weight: normal; text-transform: uppercase;}
+.history-block .top-menu-list a:hover,
+.history-block .top-menu-list a.active    { color: #000000;}
+.history-block .history-list        { padding-top: 38px; font-family: Segoe UI; font-size: 13px; line-height: 16px; font-weight: normal; text-transform: uppercase; }
+.data-block .history-block .history-list   { max-height: 130px; }
+.history-block .history-list li     { margin-bottom: 22px; border-bottom: 1px solid #CCCCCC;}
+.history-block .history-list li p   { margin-bottom: 5px;}
+.history-block .history-list .title { margin: 0px 0px 15px 7px; display: inline-block; font-size: 13px; line-height: 16px; color: #000000; }
+.history-block .history-list .price { float: right; font-size: 17px; line-height: 19px; color: #00A99D; }
+.history-block .history-list .price.red     { color: #E93124;}
+.history-block .history-list .date  { display: inline-block; font-size: 11px; line-height: 13px; color: #CCCCCC; font-family: 'Poppins', sans-serif;}
+.history-block .history-list .time  { float: right; font-size: 9px; line-height: 11px; color: #CCCCCC; }
+.jcf-scrollbar-vertical             { background: #494864; }
+.jcf-scrollbar-vertical .jcf-scrollbar-handle       { background: #FFD000; }
+.jcf-scrollbar-vertical .jcf-scrollbar-dec.jcf-inactive,
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc          { background: #494864;}
+.jcf-scrollbar.jcf-scrollbar-horizontal             { display: none !important;}
+.history-page .current-balance-block               { height: 400px; text-align: center; }
+/* History Page */
+.history-page .history-block                { height: 900px !important; }
+.history-page .history-block .history-list  { max-height: calc(100% - 70px); }
+.history-page .current-balance-block p  { text-align: center; display: block;}
+.history-page .current-balance-block h1 { margin: 20px 0;}
+.history-page .current-balance-block .select2-container { margin-bottom: 24px; }
+.align-vertical                         { position: relative; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%);  -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); }
+/* Add Sim Card Block CSS */
+.add-sim-card-block                 { padding-top: 32px;}
+.add-sim-card-block .simple-btn     { margin-left: 33px; min-width: 124px; font-size: 9px; line-height: 30px; box-shadow: 0px 3px 6px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16); font-family: 'Poppins', sans-serif; font-weight: 300;}
+.add-sim-card-block .number-list    { margin: 24px 15px 20px 20px; height: 250px; overflow-y: auto; }
+.add-sim-card-block .number-list li { margin-bottom: 17px; }
+.add-sim-card-block p               { margin: 0px; font-size: 16px; line-height: 19px; color: #8B8B8B; display: inline-block;}
+.add-sim-card-block p.number        { min-width: 52%; font-family: 'Calibri';}
+.add-sim-card-block p.status        { font-size: 9px; color: rgba(73,72,100,0.34);}
+.add-sim-card-block p.status.active { color: #33C851;}
+.add-sim-card-block a.icon          { margin-left: 15px; float: right;}
+.add-sim-card-block .pagination     { margin: 0px; padding-top: 4px; width: 100%; background: #494864; border-radius: 0px !important; text-align: center;}
+.add-sim-card-block .pagination li  { display: inline-block;}
+.add-sim-card-block .pagination li a            { display: inline-block; padding: 8px; font-weight: 700; color: #fff; background: transparent; border: none;}
+.add-sim-card-block .pagination li a:hover      { background: transparent;}
+/* Reload Block CSS */
+.reload-block                       { padding: 51px 41px 51px 48px; }
+.reload-block form,
+.refer-friend-block form            { margin-top: 37px;}
+.form-group                         { margin-bottom: 15px; }
+.form-control                       { height: auto; padding: 0px 38px; background: #F9F8F8; font-size: 12px; line-height: 45px; color: rgba(73,72,100,0.38); border-radius: 0px; border: transparent;}
+.form-control::-moz-placeholder             { color: rgba(73,72,100,0.38); opacity: 1; }
+.form-control:-ms-input-placeholder         { color: rgba(73,72,100,0.38); opacity: 1; }
+.form-control::-webkit-input-placeholder    { color: rgba(73,72,100,0.38); opacity: 1; }
+/* Refer Friend Block CSS */
+.refer-friend-block                         { padding: 51px 50px 50px 60px;}
+/* Add Remove Block CSS */
+.add-remove-block                           { padding: 51px; text-align: center;}
+.add-remove-block .add-icon                 { margin: 32px 0px; display: block; }
+/****** Referrals Page CSS *****/
+.referrals-section                          { max-width: 1068px; margin: 0px auto; padding: 51px 15px; }
+.referrals-section p                        { margin: 0px 0px 32px; font-size: 20px; line-height: 24px; color: #D8D8D8; text-align: center; font-family: 'Calibri'; font-weight: normal;}
+.referrals-section .submit-box              { margin-bottom: 44px; position: relative; }
+.referrals-section .submit-box input        { padding: 0px 332px 0px 63px; background: transparent; height: auto; font-size: 26px; line-height: 74px; color: #494864; box-shadow: 0px 5px 20px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 5px 20px rgba(0,0,0,0.16); }
+.referrals-section .form-control::-moz-placeholder             { color: #494864; opacity: 1; }
+.referrals-section .form-control:-ms-input-placeholder         { color: #494864; opacity: 1; }
+.referrals-section .form-control::-webkit-input-placeholder    { color: #494864; opacity: 1; }
+.referrals-section .submit-box button       { width: 332px; padding: 0px 40px; position: absolute; top: 0px; right: 0px; font-size: 17px; line-height: 74px; font-family: 'Calibri Light'; text-transform: capitalize;}
+.referrals-section .referrals-list li       { padding: 27px 0px 24px; font-size: 21px; line-height: 27px; border-bottom: 1px solid #E4E5E6; color: #9E9DAC;}
+.referrals-section .referrals-list li.title { padding: 14px 0px; border-bottom: 2px solid #BCBEBF; text-transform: capitalize;}
+.referrals-section .referrals-list h2       { margin: 0px; font-size: 34px; line-height: 41px; color: #494864; font-weight: 300;}
+.referrals-section .referrals-list span     { float: right;}
+/****** Add SIM Card Page CSS *****/
+.add-card-section                           { max-width: 1068px; margin: 0px auto; padding: 130px 15px; text-align: center;}
+.add-card-section .jcf-select               { margin: 10px 0px 32px; min-width: 254px;}
+.add-card-section .form-control             { margin-bottom: 42px; padding: 15px; font-size: 20px; line-height: 30px; color: #494864; background: transparent;}
+.add-card-section .input-group              { display: block; margin-bottom: 42px;}
+.add-card-section .input-group-addon,
+.add-card-section .input-group .form-control { display: inline-block; float: none; vertical-align: middle;}
+.add-card-section .input-group-addon         { width: 50px; line-height: 47px; padding: 6px 15px; font-size: 20px; border: none; border-radius: 0; background: transparent;}
+.add-card-section .input-group .form-control { margin-bottom: 0; padding-left: 0; width: calc(100% - 55px); }
+.add-card-section .input-group .form-control:focus { box-shadow: none; }
+.add-card-section .form-control::-moz-placeholder             { color: #494864; opacity: 0.11; }
+.add-card-section .form-control:-ms-input-placeholder         { color: #494864; opacity: 0.11; }
+.add-card-section .form-control::-webkit-input-placeholder    { color: #494864; opacity: 0.11; }
+.add-card-section .simple-btn               { min-width: 385px; line-height: 57px;}
+/****** GPRS Package Page CSS *****/
+.gprs-package-section                       { padding: 20px 0px;}
+.gprs-package-section h3                    { margin: 8px 0px; display: inline-block; }
+.gprs-package-section .jcf-select           { min-width: 188px; float: right; margin-bottom: 32px; }
+.gprs-package-section .shadow-box           { margin-bottom: 33px; height: auto; min-height: 335px;}
+.gprs-package-section .package              { padding: 34px 70px 36px; text-align: center;}
+.gprs-package-section .package h2           { margin: 0px 0px 10px; font-size: 31px; line-height: 37px; font-weight: 300;}
+.gprs-package-section .package h2.yellow    { color: #FFD000; font-weight: 700;}
+.gprs-package-section .package-feature-list { margin: 23px 0px 8px; font-size: 18px; line-height: 22px; color: #D7D7DD;} 
+.gprs-package-section .package-feature-list li  { margin-bottom: 16px; width: calc( 100% / 2 - 3px);}
+.gprs-package-section .package .simple-btn  { min-width: 151px; line-height: 37px; font-size: 14px;}
+/****** Geolocalization Page CSS *****/
+#page-content-wrapper.geolocalization      { padding: 0px;}
+#page-content-wrapper.geolocalization #map { height: calc(100vh - 76px); width: 100%;}
+/****** Dashboard Advanced Page CSS *****/
+.dashboard-advanced-section .simple-shadow          { margin-bottom: 20px; height: 100%;}
+.dashboard-advanced-section .simple-shadow.big      { height: 100%;}
+.dashboard-advanced-section .simple-shadow.small    { height: 100%; font-size: 100%;}
+.call-forward-block                                 { padding: 56px 48px 52px;}
+.call-forward-block p                               { margin-bottom: 35px;}
+.call-forward-block form                            { font-family: 'Calibri Light'; }
+.call-forward-block .form-control                   { line-height: 58px; font-size: 17px;}
+.selection-box                                      { padding: 20px 15px;}
+.selection-box .jcf-select-yellow.jcf-select        { background: #FFD000; border: none;}
+.selection-box .jcf-select                          { margin: 0px 7px; }
+.selection-box .jcf-select .jcf-select-text         { margin: 0 35px 0 20px;}
+.selection-box .jcf-select .jcf-select-opener       { width: 25px;}
+.selection-box button                               { background: #494864; height: 45px; width: 45px; border-radius: 50%; border: none;}
+.selection-box button:hover                         { background: #FFD000; border: none;}
+.activation-block                                   { padding: 52px 60px;}
+.activation-block .activate-btn                     { margin: 50px auto 0px; width: 218px; height: 218px; display: block; background: #FFD000; font-size: 32px; line-height: 218px; color: #494864; border-radius: 50%; text-align: center; text-transform: capitalize;}
+.activation-block .activate-btn:hover               { background: #494864; color: #FFD000;}
+.geolocalisation-block                              { padding: 56px 25px 25px; }
+.geolocalisation-block #map                         { margin-top: 26px; width: 100%; height: 266px;}
+.statistics-block                                   { padding: 51px 41px; }
+.statistics-block .statistics-list                  { margin-top: 17.5px; padding: 22px 0px 3px; border: 1px solid #95989A; border-left: none; border-right: none;}
+.statistics-block .statistics-list li               { margin-bottom: 17px;}
+.statistics-block .statistics-list li span          { float: right; }
+.statistics-block .note                             { color: #BBBBC5;}
+.advanced.reload-block                              { padding-top: 39px; position: relative;}
+.advanced.reload-block .search-box                  { position: absolute; width: 100%; left: 0px; top: 0px; }
+.advanced.reload-block .search-box .form-control    { background: #EFEFEF; line-height: 54px; border: none;}
+.advanced.reload-block p                            { margin-bottom: 16px;}
+.dashboard-advanced-section .form-control           { background: #FBFBFE; color: #BDBCC7; border: 1px solid #D6D9ED;}
+.add-header .remove-img,
+.add-header .remove-img:hover,
+.remove-img:hover                                   { object-position: bottom center; }
+.remove-img                                         { object-position: top center; }
+.remove-img,
+.add-img                                            { object-fit: none;  height: 45px; width: 45px;}
+.add-img                                            { object-position: bottom center; }
+.add-img:hover                                      { object-position: top center; }
+.add-remove-list-block                              { padding: 20px 25px; width: 100%; overflow-y: auto; position: absolute; top: 0; left: 0;}
+.add-header p                                       { margin: 12px 0;}
+.add-remove-list > ul > li                          { margin-bottom: 5px; padding: 8px 8px 8px 18px; border: 2px solid #D5D8EB; }
+.list-title span                                    { display: inline-block; font-size: 15px; font-weight: 300;}
+.add-remove-list > ul > li > div                    { display: inline-block; vertical-align: middle;}
+.add-remove-list > ul > li > div.list-title         { width: calc(100% - 120px);}
+.add-remove-list > ul > li > div.action-btns        { width: 115px; text-align: center;}
+.action-btns > ul                                   { margin-left: 0; }
+.add-remove-list                                    { margin-top: 20px;}
+.dashboard-advanced-section .simple-shadow.small.add-remove-list-block { width: 100% !important; height: 100% !important; }
+.add-remove-list-block .remove-icon:hover           { cursor: pointer; }
+.add-remove-block-function                          { position: relative; }
+/*.add-remove-block-function .add-remove-block        { width: 100%; background: #fff;}*/
+.add-remove-block-function .add-remove-block.hide   { z-index: -1; }
+ /* The switch - the box around the slider */
+.switch                                             { margin-bottom: 0; position: relative; display: inline-block; width: 60px; height: 18px; }
+/* Hide default HTML checkbox */
+.switch input                                       { display:none;}
+/* The slider */
+.slider                                             { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(191, 191, 199,0.5); -webkit-transition: .4s; transition: .4s; }
+.slider:before                                      { position: absolute; content: ""; height: 32px; width: 32px; left: -3px; bottom: -6px; background-color: #BFBFC7; -webkit-transition: .4s; transition: .4s; }
+input:checked + .slider                             { background-color: rgba(0, 189, 156,0.5);}
+input:focus + .slider                               { box-shadow: 0 0 1px rgba(0, 189, 156,0.5);}
+input:checked + .slider:before                      { -webkit-transform: translateX(32px); -ms-transform: translateX(32px); transform: translateX(32px); background-color: #00BD9C;}
+/* Rounded sliders */
+.slider.round                                       { border-radius: 34px;}
+.slider.round:before                                { border-radius: 50%;} 
+.toggle-btns .list-inline > li                      { vertical-align: middle;}
+.toggle-btns > ul > li                              { padding: 18px 0; }
+.toggle-btns                                        { padding: 10px 0 0; border-top: 1px solid rgba(112, 112, 112,0.15); margin-top: 20px;}
+.remove-number a                                    { color: #d2d2d2; font-weight: 600; }
+/****** Auto Reload Page CSS *****/
+.auto-reload-section                                { padding-top: 8px; }
+.auto-reload-main-block                             { float: left; margin: 0px 30px 0px 0px; width: 70%;}
+.auto-reload-main-block .header-section > ul        { margin: 0px 0px 0px 14px; display: inline-block;}
+.auto-reload-main-block .header-section ul li a     { display: block; padding: 17px 12px; font-size: 9px; line-height: 21px; color: #494864; font-weight: bold;}
+.auto-reload-main-block .header-section .jcf-select { width: auto; margin: 0px; background: transparent; border: none; box-shadow: none;  -webkit-box-shadow: none; display: inline;}
+.auto-reload-main-block .header-section .jcf-select .jcf-select-text    { margin: 0px 21px 0px 0px; font-size: 9px; line-height: 21px; text-align: left;  display: inline;}
+.auto-reload-main-block .header-section .jcf-list .jcf-option           { font-size: 9px; line-height: 21px;}         
+.auto-reload-main-block .header-section .jcf-select .jcf-select-opener  { width: 21px; height: 21px; top: -5px; right: -5px; background: #EFEFEF url("../images/down-arrow-dark.png") no-repeat center center; border-radius: 50%; }
+.auto-reload-main-block .header-section .search-box { float: right; width: 450px; padding: 0px 60px; line-height: 54px;}
+.auto-reload-main-block .auto-reload-list           { padding: 30px 27px 20px;}
+.auto-reload-main-block .auto-reload-list > ul > li { margin-bottom: 26px; }
+.auto-reload-main-block .jcf-select                 { margin: 0px 16px 0px 10px; width: 254px;}
+.auto-reload-main-block .icon                       { margin: 0px 11px; }
+.auto-reload-main-block .auto-reload-list p.form-title      { display: inline-block; min-width: 192px; color: #8B8B8B; }
+.auto-reload-main-block .auto-reload-list .form-control     { display: inline-block; max-width: 192px; margin: 0px 2px; padding: 0px 15px; font-size: 10px; line-height: 29px; background: #FBFBFE; border: 1px solid #D6D9ED;}
+.auto-reload-main-block .auto-reload-list button            { background: #494864; width: 31px; height: 31px; border: none;  }
+.auto-reload-main-block .auto-reload-list button:hover      { background: #FFD000; border: none;  }
+.auto-reload-main-block .inner-list                 { display: none; padding: 21px 0px 0px 31px; margin: 0px 0px 30px; }
+.auto-reload-main-block .inner-list li              { margin-bottom: 10px;}
+.auto-reload-main-block .inner-list .jcf-checkbox   { width: 29px; height: 29px;}
+.auto-reload-main-block .inner-list .jcf-checkbox.jcf-checked  { background-size: 50%;}
+.auto-reload-main-block .inner-list li .card-number     { display: inline-block; min-width: 124px; }
+.auto-reload-main-block .inner-list li .card-balance    { display: inline-block; padding: 0px 5px; min-width: 90px; text-align: center;}
+.auto-reload-main-block .inner-list p.name          { display: inline-block; margin: 0px 0px 0px 12px; min-width: 236px; font-size: 16px; line-height: 19px; color: #494864; }
+.auto-reload-main-block .inner-list p.name span     { color: #8B8B8B;}
+.auto-reload-main-block .inner-list p.status        { min-width: 96px; display: inline-block; color: #C0C0C9; font-size: 9px; line-height: 11px; text-align: center;}
+.auto-reload-main-block .inner-list p.status.active { color: #33C851;}
+.auto-reload-main-block .inner-list button          { margin-right: 15px;}
+.auto-reload-main-block .inner-list .icon           { margin: 0px 7px;}
+.auto-reload-main-block .auto-reload-list button.add-btn { width: auto; margin: 0px 10px; padding: 20px 50px; height: auto; position: relative; min-width: 250px; border-radius: 50px; text-align: left;}
+.auto-reload-main-block .auto-reload-list button.add-btn span { color: #F7F7F8; font-size: 13px; line-height: 20px; margin-left: 10px;}
+.auto-reload-main-block .auto-reload-list button.add-btn .add { background-color: #FFD000; height: 45px; width: 45px; border-radius: 50%; padding: 13px; position: absolute; top: 8px; right: 10px; left: auto; transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out;}
+.auto-reload-main-block .auto-reload-list button.add-btn:hover .add { width: 100%; height: 100%; top: 0; right: 0; border-radius: 50px; text-align: center; padding: 20px;}
+.deposit-funds-block                                { float: left; margin-bottom: 30px; width: calc(30% - 30px); padding: 135px 15px 50px;  text-align: center;}
+.deposit-funds-block h1                             { margin: 20px 0px; font-size: 101px; line-height: 121px;}
+.transactions-block                                 { float: right; width: calc(30% - 30px); height: 360px; }
+.transactions-block .jcf-scrollable                 { width: 100% !important; height: 360px; overflow-y: auto; overflow-x: hidden; padding: 46px 50px 0px 40px;} 
+.transactions-block .title                          { margin-bottom: 24px; padding-bottom: 11px; border-bottom: 1px solid #C6C6CF; }
+.transactions-block .transactions-list li           { margin-bottom: 24px; }  
+.transactions-block .transactions-list p            { display: inline-block; margin: 0px;}
+.transactions-block .transactions-list p.number span { color: #ABAAB7; margin-left: 25px;}
+.transactions-block .transactions-list p.price      { float: right; color: #00A99D; font-size: 17px; line-height: 20px;}
+.transactions-block .transactions-list p.info,
+.transactions-block .transactions-list p.time       { margin-top: 4px; font-size: 9px; line-height: 11px; color: #DCDBE1;}
+.transactions-block .transactions-list p.time       { margin-top: 6px; float: right;}
+.add-members                                        { border: 1px solid #FFD000; text-align: left; padding: 0 20px; max-height: 300px; overflow-y: auto;}
+.add-members.no-cards                               { overflow: hidden;}
+.common-modal .checkbox label                       { margin: 0; padding: 0;}
+.common-modal .checkbox label .jcf-checkbox         { border-radius: 0;  height: 30px; width: 30px;}
+.add-members .list-inline > li                      { vertical-align: middle;}
+.add-members .list-inline > li:last-child           { width: 42px;}
+.add-members .list-inline > li:first-child          { width: calc(100% - 47px); }
+.add-members .list-unstyled > li                    { border-bottom: 1px solid #aaa;}
+.add-members .list-unstyled > li:last-child         { border: none;}
+.add-members.no-cards .list-unstyled                { margin: 0; padding: 10px 0; text-align: center;}
+.add-members .list-inline                           { padding: 15px 0;}
+.add-members .checkbox                              { margin: 0; }
+.add-members .list-unstyled                         { margin-bottom: 0;}
+.add-members li > span                              { display: block; margin-top: 5px;}
+#group-add .modal-body > form                       { display: inline-block;}
+.add                                                { display: inline-block; background-color: #ffd000; height: 50px; width: 50px; border-radius: 50%; padding: 15px; cursor: pointer;}
+.add:hover                                          { background-color: #EFEFEF; }
+.group-name                                         { display: inline-block; margin: 0px 16px 0px 10px; padding: 13px 30px; background: #EFEFEF url("../images/down-arrow-dark.png") no-repeat 92% center; border: 0.25px solid rgba(149,152,154,0.53); border-radius: 2em; text-align: center; box-shadow: 0px 3px 6px rgba(0,0,0,0.16); -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.16); width: 254px; cursor: pointer;  overflow: hidden; white-space: nowrap; text-overflow: ellipsis; vertical-align: top;}
+.group-name.active                                  { background-color: #ffd000; }
+.group-card-balance                                 { margin-top: 50px; }
+.group-card-balance .form-control                   { margin: 30px auto; width: 60%;}
+.group-card-balance p                               { margin-bottom: 30px; }
+/****** Landline Activation Page CSS *****/
+.landline-activation-section                        { max-width: 700px; margin: 50px auto; padding: 100px 0;}
+.landline-activation-section .jcf-select            { margin: 0 0 20px; border-radius: 3em;  }
+.landline-activation-section .jcf-select-text       { font-size: 22px; line-height: 80px; }
+.landline-activation-section .jcf-list .jcf-option  { font-size: 18px; line-height: 50px; }
+.landline-activation-section .jcf-select .jcf-select-opener         { right: 50px; background-position: center; background-size: 20px; background-repeat: no-repeat;}
+.landline-activation-section .jcf-select-country .jcf-select-opener { background-image: url(../images/arrow-down-white.svg); }
+.landline-activation-section .jcf-select-phone .jcf-select-opener   { background-image: url(../images/arrow-down-dark.svg); }
+span.jcf-select-country                             { padding: 0 50px; border: 2px solid #403F59; box-shadow: none; background: #403F59; color: #FAFAFE; width: 100%; text-align: left; cursor: pointer;}
+span.jcf-select-phone                               { padding: 0 50px; border: 2px solid #E6E7F3; box-shadow: none; background: #FAFAFE; color: #2C303A; width: 100%; text-align: left; cursor: pointer;}
+.landline-activation-section h1                     { font-size: 45px; line-height: 60px;}
+.landline-activation-section .form-group            { margin: 0; }
+.landline-activation-section form                   { margin-top: 50px;}
+.landline-activation-section .simple-btn            { min-width: 325px; font-size: 24px; line-height: 80px; }
+.numbers-list ul li                                 { padding: 20px 0; width: 100%; text-align: left; color: rgba(73, 72, 100, 0.53); font-size: 18px; line-height: 25px; font-weight: 300; border-bottom: 2px solid rgba(149, 152, 154, 0.25);}
+.numbers-list button                                { margin-top: 30px; }
+.activation-block ul                                { margin: 30px 0;}
+.activation-block a                                 { display: inline-block; margin-top: 20px;  color: #d2d2d2; font-weight: 600;}
+.activation-block a.btn                             { font-weight: 400; }
+.activation-block a:hover                           { color: #ffd000; }
+.numbers-list ul > li > a                           { float: right; color: #aaa;}
+.numbers-list ul > li > span                        { float: left;}
+.landline-activation-section  .jcf-list             { max-height: 300px; overflow-y: auto;}
+/****** Account Details Page CSS *****/
+.account-details label                              { display: block; color: #242330; text-transform: uppercase; margin-bottom: 10px;}
+.account-details .value                             { color: #242330; font-size: 20px; line-height: 30px;} 
+.simple-shadow.account-details                      { margin: 30px 0px 60px 15px; padding: 50px 40px 35px;}
+.account-details li                                 { padding: 20px 0;}
+.account-settings-page .big-text                    { color: #A7A7B4; font-weight: bold; font-size: 22px; line-height: 30px; display: inline-block;}
+.deactivate-btn                                     { color: #A7A7B4; font-weight: 600; font-size: 18px; line-height: 30px; display: inline-block; }
+.account-settings-page form label                   { color: #242330; text-transform: uppercase; font-weight: 600; margin-bottom: 15px;}
+.account-settings-page .form-control                { font-size: 22px; line-height: 88px; }
+.account-settings-page .form-group                  { margin-bottom: 25px; }
+.account-settings-page .simple-btn                  { margin-top: 5px; font-size: 20px; line-height: 55px;  }
+.account-settings-inner                             { margin: 30px auto 0; width: 90%;}
+/******** Middle section CSS End *******/
+/****** GPRS *******/
+.zone-header                                        { padding: 23px 60px; background-color: rgba(239, 239, 239, 0.53); border: 0.25px solid #efefef; box-shadow: 0 3px 6px rgba(0,0,0,0.06);}
+.zone-header h2                                     { margin: 0; color: #494864; }
+.zone-header h6                                     { margin: 0; font-size: 13px; font-weight: 100; line-height: 20px; color: #494864; }
+.zone-container .shadow-box                         { height: auto;}
+.zone-body                                          { padding: 30px 60px;}
+.zone-list li                                       { font-size: 15px; font-weight: 100; color: #494864; line-height: 23px; width: 100%; word-wrap: break-word;}
+.zone-footer                                        { padding: 0 60px 25px; text-align: center;}
+.zone-footer .btn                                   { padding: 16px 40px; border-radius: 100px; background-color: #FFD000; color: #fff; font-size: 18px; line-height: 25px;}
+.zone-footer .btn:hover                             { background-color: #494864; }
+.zone-list                                          { margin: 0; }
+
+.form-step .jcf-select                   { margin-bottom: 0; padding: 17px 25px; height: auto; width: 100%; border: 1px solid #d6d9ed; background: #fbfbfe; box-shadow: none; border-radius: 0;}
+.form-step .jcf-select.jcf-disabled      { background: #fbfbfe !important; cursor: not-allowed;}
+.form-step .jcf-select-text              { font-size: 19px; line-height: 23px; }
+.form-step .jcf-select-opener            { width: 58px; background: url("../images/down-arrow.png") no-repeat center 54%;  }
+.form-step .jcf-select-drop-content      { border: 0px; box-shadow: 0px 0px 4px #cdcdcd; -webkit-box-shadow: 0px 0px 4px #cdcdcd;}
+.form-step .jcf-option                   { padding: 14px 22px; font-size: 16px; line-height: 20px; }
+.account-settings-page .form-step .form-control {  padding: 17px 25px; line-height: 22px; font-size: 19px;}
+.form-step .jcf-select-drop .jcf-select-drop-content,
+.form-step .jcf-list .jcf-option     { border-radius: 0; }
+.form-step .jcf-disabled .jcf-select-text   { cursor: not-allowed; }
+.no-location                            { width: 40%; margin: 0 auto;}
+.no-location .form-step                 { margin-top: 30px;}
+.no-location .input-group               { width: 100%;}
+.no-location .form-control              { background-color: #fbfbfe; border: 1px solid #d6d9ed; border-radius: 0; padding: 17px 25px; font-size: 19px; line-height: 23px; color: #494864;}
+.no-location .form-control::-moz-placeholder { color: #494864; }
+.no-location .form-control::-webkit-input-placeholder { color: #494864; }
+.no-location .form-control:-ms-input-placeholder { color: #494864; }
+.no-location .form-control::-o-placeholder { color: #494864; }
+.no-location .input-group-addon         { border-radius: 0; background: url(../images/calendar.png) no-repeat center; width: 50px;  background-color: #fbfbfe;}
+.no-location .form-step .jcf-select     { text-align: left; }
+.no-location .form-step .jcf-select  .jcf-select-text { margin: 0; }
+.gprs-package-header                    { margin-bottom: 30px;}
+.gprs-package-header .select2           { margin-left: 15px; float: right;}
+
+/****** Send SMS *******/
+.send-sms .form-control                 { padding: 6px 25px; border: 1px solid #d6d9ed; background-color: #fbfbfe; font-size: 19px; }
+.send-sms .form-step                    { width: 50%; margin: 25px auto 0; text-align: left;}
+.send-sms label                         { margin-bottom: 14px; opacity: 0.52; }
+.send-sms label.small                   { font-weight: 300; margin-bottom: 0; position: absolute; right: 28px; bottom: 20px; }
+.send-sms .form-group                   { position: relative;}
+.send-sms .form-step .jcf-select-text,
+.send-sms .form-step .jcf-list .jcf-option   { text-align: left;}
+
+.form-vertical                          { padding: 0 100px; position: relative; top: 50%; transform: translateY(-50%);}
+.send-sms.web-call label                { font-size: 22px;}
+.points                                 { margin: 50px 0;}
+.points h5                              { font-weight: 700;}
+.web-call h1                            { text-align: left;}
+.points ol                              { list-style: number; padding-left: 16px;}
+
+.help-block                             { margin: 0 0 20px;}
+.form-error .help-block                 { margin: 10px 0 0; padding: 2px 2px 0; background-color: #a94442; color: #fff; font-weight: 700; }
+/***** Bottom section CSS Start *******/
+footer							{}
+nav ul.footer-nav				{}
+nav ul.footer-nav li			{}
+nav ul.footer-nav li a			{}
+nav ul.footer-nav li a:hover	{}
+.site-info					{}
+/****** Bottom section CSS End *******/
+
+/***** Responsive CSS Start *******/
+@media (max-width: 1850px){
+    .current-balance-block .jcf-select      { min-width: 0px; }
+    .gprs-package-section .package          { padding: 34px 40px;}
+}
+@media (max-width: 1699px){
+    #page-content-wrapper               { padding: 40px 15px 10px; }
+}
+@media (min-width: 1600px) and (max-width: 1899px){
+/****** Dashboard Advanced Page CSS *****/
+    .selection-box .jcf-select          { margin: 0px 2px; }
+    .selection-box                      { padding: 20px 10px;}
+    .activation-block                   { padding: 52px 30px; }
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block .header-section ul li a { font-size: 9px;}
+    .auto-reload-main-block .inner-list         { padding: 21px 0px 0px 15px; }
+    .auto-reload-main-block .inner-list button  { margin-right: 5px;}
+    .auto-reload-main-block .inner-list .icon   { margin: 0px 5px; }
+    .transactions-block .jcf-scrollable         { padding: 46px 30px 0px 30px; }
+    .deposit-funds-block h1                     { font-size: 80px;}
+    .auto-reload-main-block .inner-list p.status { min-width: 70px; }
+}
+@media (max-width: 1400px){
+    .jcf-select .jcf-select-text                { font-size: 13px;}
+}
+@media (min-width: 1400px) and (max-width: 1599px){
+/******* Sidebar Section CSS Start *******/
+    #sidebar-wrapper .user-info                 { padding: 60px 0px 50px; }
+    #sidebar-wrapper .sidebar-menu              { margin: 20px 0px 10px; }
+/******* Sidebar Section CSS End *******/
+    .current-balance-block h1                   { font-size: 72px; line-height: 82px;}
+    .current-balance-block                      { padding: 30px 20px 10px 20px; }
+    .current-balance-block .jcf-select-text     { margin: 0px 45px 0px 30px; line-height: 45px; }
+    .add-sim-card-block .number-list            { margin: 24px 12px 21px 15px; }
+    .add-sim-card-block a.icon                  { margin-left: 5px;}
+    .add-sim-card-block .mCSB_inside > .mCSB_container {margin-right: 25px; }
+/****** GPRS Package Page CSS *****/
+    .gprs-package-section .package              { padding: 34px 25px;}
+    .gprs-package-section .package h2           { font-size: 27px; line-height: 36px;}
+    .gprs-package-section .package-feature-list { font-size: 16px;}
+/****** Dashboard Advanced Page CSS *****/
+    .call-forward-block                         { padding: 56px 30px 52px; }
+    .selection-box .jcf-select                  { margin: 0px 2px; min-width: 0px; }
+    .selection-box                              { padding: 20px 0px; }
+    .selection-box .jcf-select .jcf-select-text { margin: 0 28px 0 10px; }
+    .activation-block                           { padding: 52px 30px; }
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block .header-section ul li a { padding: 17px 4px; font-size: 9px;}
+    .auto-reload-main-block .header-section .search-box     { width: 360px;}
+    .auto-reload-main-block .auto-reload-list   { padding: 30px 15px; }
+    .auto-reload-main-block .jcf-select         { margin: 0px 5px; width: 180px; }
+    .auto-reload-main-block .icon               { margin: 0px 7px; }
+    .auto-reload-main-block .inner-list         { padding: 21px 0px 0px 15px; }
+    .auto-reload-main-block .inner-list p.name  { margin: 0px 0px 0px 5px; min-width: 180px; font-size: 12px;}
+    .auto-reload-main-block .auto-reload-list .form-control { max-width: 163px; margin: 0px 2px; padding: 0px 10px;}
+    .auto-reload-main-block .inner-list button  { margin-right: 4px;}
+    .auto-reload-main-block .inner-list .icon   { margin: 0px 4px; }
+    .auto-reload-main-block .inner-list p.status { min-width: 60px; }
+    .transactions-block .jcf-scrollable         { padding: 46px 25px 0px 20px; }
+    .deposit-funds-block h1                     { font-size: 70px; }
+    .transactions-block .transactions-list p.number         { font-size: 13px;}
+    .transactions-block .transactions-list p.number span    { color: #ABAAB7; margin-left: 10px; }
+     /****** GPRS *******/
+     .zone-block                                            { margin-bottom: 30px; }
+    .zone-header                                            { padding: 23px 20px; }
+    .zone-header h2                                         { font-size: 28px; }
+    .zone-body                                              { padding: 30px 20px; }
+    .zone-footer                                            { padding: 0 20px 25px; }
+    .zone-footer .btn                                       { padding: 15px 30px; font-size: 14px;}
+    /****** Add SIM Card Page CSS *****/
+    .add-card-section .form-control             { padding: 10px; font-size: 35px; line-height: 60px;}
+    /**** Send SMS ****/
+    .send-sms .form-control                                 { font-size: 13px; }
+}
+@media (max-width: 1399px){
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block                     { width: calc(100% - 30px); margin: 0px 15px 30px 15px; }
+    .deposit-funds-block,
+    .transactions-block                         { width: calc(50% - 30px); margin: 0px 15px; height: 360px; }
+    .deposit-funds-block                        { padding: 70px 15px 50px; height: auto;}
+/******* Sidebar Section CSS Start *******/
+    #sidebar-wrapper .user-info                 { padding: 30px 0px 20px; }
+    #sidebar-wrapper .user-info h2              { font-size: 30px; line-height: 32px;}
+    #sidebar-wrapper .jcf-select-text           { line-height: 40px; }
+    #sidebar-wrapper .jcf-list .jcf-option      { line-height: 25px;}
+    #sidebar-wrapper .sidebar-menu              { margin: 10px 0px; }
+    #sidebar-wrapper .sidebar-menu li a         { padding: 5px 15px; font-size: 13px; line-height: 15px;} 
+    #sidebar-wrapper .sidebar-bottom-menu       { }
+    #sidebar-wrapper .sidebar-bottom-menu li a  { padding: 7px 20px;  }
+    #sidebar-wrapper .sidebar-bottom-menu .icon { margin-right: 14px;}
+    #sidebar-wrapper.double-menu .user-info     { padding: 15px 0px 5px;}
+    #sidebar-wrapper.double-menu .user-info h2  { font-size: 24px; line-height: 26px;}
+    #sidebar-wrapper.double-menu .user-info p   { margin: 0px;}
+    #sidebar-wrapper.double-menu .sidebar-menu  { margin: 0px 0px 10px; }
+    #sidebar-wrapper.double-menu .sidebar-menu.tool-menu    { padding-top: 10px; }
+    #sidebar-wrapper.double-menu .sidebar-menu li a         { font-size: 12px; line-height: 12px;}
+    #sidebar-wrapper.double-menu .sidebar-bottom-menu li a  { padding: 4px 20px;  }
+/******* Sidebar Section CSS End *******/
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+    #sidebar-wrapper                            { width: 210px; }
+    #wrapper                                    { padding-left: 210px; }
+    .form-control                               { padding: 0px 20px;}
+    .current-balance-block h1                   { font-size: 64px; line-height: 74px;}
+    .current-balance-block                      { padding: 30px 15px 10px 15px; }
+    .current-balance-block .jcf-select-text     { margin: 0px 25px 0px 15px; line-height: 45px; }
+    .current-balance-block .jcf-select-opener   { width: 20px;}
+    .history-block .top-menu-list a             { margin: 0px 4px;}
+    .add-sim-card-block .number-list            { margin: 24px 5px 20px 12px; }
+    .add-sim-card-block p.number                { min-width: 47%;}
+    .add-sim-card-block p                       { font-size: 13px;}
+    .add-sim-card-block a.icon                  { margin-left: 5px;}
+    .add-sim-card-block .mCSB_inside > .mCSB_container          { margin-right: 20px; }
+    .add-sim-card-block .mCSB_scrollTools .mCSB_draggerRail,
+    .add-sim-card-block .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar   { width: 8px; }
+    .reload-block,
+    .refer-friend-block,
+    .add-remove-block                           { padding: 40px 30px;}
+/****** Add SIM Card Page CSS *****/
+    .add-card-section                           { padding: 60px 15px; }
+    .add-card-section .form-control             { padding: 10px; font-size: 35px; line-height: 60px;}
+/****** GPRS Package Page CSS *****/
+    .gprs-package-section .package              { padding: 34px 20px;}
+    .gprs-package-section .package h2           { font-size: 24px; line-height: 36px;}
+    .gprs-package-section .package-feature-list { font-size: 14px; }
+/****** Dashboard Advanced Page CSS *****/
+    .call-forward-block,.activation-block       { padding: 50px 15px; }
+    .selection-box .jcf-select                  { margin: 0px 2px; min-width: 0px; }
+    .selection-box .jcf-select .jcf-select-text { margin: 0 26px 0 10px; font-size: 11px; line-height: 36px;}
+    .selection-box .jcf-list .jcf-option        { font-size: 11px; line-height: 36px;}
+    .selection-box .jcf-select .jcf-select-opener { width: 20px; }
+    .selection-box button                       { width: 36px; height: 36px;}
+    .selection-box                              { padding: 20px 0px; }
+    .statistics-block                           { padding: 40px 30px; }
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block .inner-list             { padding: 21px 0px 0px 20px; }
+    .auto-reload-main-block .inner-list p.name      { margin: 0px 0px 0px 10px; min-width: 210px; font-size: 14px;}
+    .auto-reload-main-block .inner-list p.status    { min-width: 70px;} 
+/****** Account Details Page CSS *****/
+    .account-settings-page .form-control            { font-size: 22px; line-height: 70px; }
+    .simple-shadow.account-details                  { margin: 30px 0px 50px 0px; padding: 25px 25px 10px; }
+     /****** GPRS *******/
+     .zone-block                                            { margin-bottom: 30px; }
+     .zone-header h2                                         { font-size: 28px; }
+    .zone-header                                            { padding: 23px 20px; }
+    .zone-body                                              { padding: 30px 20px; }
+    .zone-footer                                            { padding: 0 20px 25px; }
+    .zone-footer .btn                                       { padding: 15px 30px; font-size: 14px;}
+    /**** Send SMS ****/
+    .send-sms .form-step                                    { width: 80%; }
+    .send-sms .form-control                                 { font-size: 13px; }
+}
+@media (min-width: 1175px) and (max-width: 1399px){
+    .date-filter                                            { padding: 15px 20px; }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .shadow-box.small                           { height: 468px;}
+    h1                                          { font-size: 46px; line-height: 56px; }
+    h3                                          { font-size: 19px; line-height: 24px; }
+    .current-balance-block                      { padding: 30px 20px 10px 20px; }
+    .current-balance-block .jcf-select-text     { margin: 0px 40px 0px 20px; }
+    .current-balance-block .jcf-select-opener   { width: 28px;}
+    .current-balance-block h1                   { font-size: 72px; line-height: 82px;}
+    .history-block .top-menu-list a             { margin: 0px;}
+    .history-block                              { padding: 46px 20px 0px 20px;}
+    .dashboard-advanced-section .simple-shadow.small.add-remove-list-block { height: 388px !important; }
+  /*   .add-remove-block-function.home-page .add-remove-block,
+    .add-remove-block-function.home-page .add-remove-list-block  { height: 468px !important; } */
+    .common-modal  h2                           { font-size: 26px; line-height: 35px; }
+     .data-block .shadow-box .date-filter            { margin: 0 -20px 10px;}
+/****** Referrals Page CSS *****/
+    .referrals-section                          { padding: 30px; }
+    .referrals-section .submit-box              { margin-bottom: 30px;} 
+    .referrals-section .submit-box input        { padding: 0px 200px 0px 30px; font-size: 18px; line-height: 50px; }
+    .referrals-section .submit-box button       { width: 200px; padding: 0px 30px; font-size: 15px; line-height: 50px;}
+    .referrals-section .referrals-list h2       { font-size: 28px; line-height: 36px;}
+    .referrals-section .referrals-list li       { font-size: 19px; line-height: 24px;}
+/****** Add SIM Card Page CSS *****/
+    .add-card-section                           { padding: 50px 15px; }
+     .add-card-section .form-control             { padding: 10px; font-size: 30px; line-height: 60px;}
+    .add-card-section .simple-btn               { min-width: 385px; line-height: 50px;}
+/****** GPRS Package Page CSS *****/
+    .gprs-package-section .package              { padding: 34px 25px;}
+    .gprs-package-section .package h2           { font-size: 27px; }
+    .gprs-package-section .package-feature-list { font-size: 16px;}
+/****** Dashboard Advanced Page CSS *****/
+    .dashboard-advanced-section .simple-shadow.small    { height: 388px;}
+    .call-forward-block                         { padding: 52px 30px 40px; }
+    .selection-box .jcf-select                  { margin: 0px 2px; min-width: 0px; }
+    .selection-box                              { padding: 20px 0px; }
+    .selection-box .jcf-select .jcf-select-text { margin: 0 28px 0 10px; font-size: 11px;}
+    .selection-box .jcf-select .jcf-select-opener { width: 22px; }
+    .activation-block                           { padding: 52px 30px; }
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block .header-section ul li a             { padding: 17px 4px; font-size: 9px;}
+    .auto-reload-main-block .header-section .search-box         { width: 250px; padding: 0px 15px;}
+    .auto-reload-main-block .jcf-select                         { margin: 0px 30px;}
+    .auto-reload-main-block .auto-reload-list                   { text-align: center; }
+    .auto-reload-main-block .auto-reload-list .form-control     { margin: 20px 4px; width: calc(50% - 12px); max-width: inherit; margin-top: 20px;}
+    .auto-reload-main-block .auto-reload-list .inner-list .form-control     { width: calc(50% - 60px);  margin-top: 10px; }
+    .auto-reload-main-block .inner-list                         { padding: 21px 0px 0px 20px; }
+    .auto-reload-main-block .inner-list p.status                { width: 30%;}
+    .auto-reload-main-block .inner-list button                  { margin-right: 10px; }
+    .deposit-funds-block h1                                     { font-size: 60px;}
+    .transactions-block .jcf-scrollable                         { padding: 30px 30px 0px 20px;}
+    .transactions-block .transactions-list p.number span        { margin-left: 10px;}
+    .transactions-block .transactions-list p.number             { font-size: 14px;}
+/****** Account Details Page CSS *****/
+    .account-details .value                         { overflow-wrap: break-word; font-size: 17px; line-height: 22px;}
+    .account-settings-inner                         { width: 100%; }
+    .account-settings-page .form-control            { font-size: 22px; line-height: 63px; }
+    .simple-shadow.account-details                  { margin: 30px 0px 50px 0px; padding: 25px 25px 10px; }
+/****** History Page CSS *****/
+    .history-page .current-balance-block h1         { font-size: 60px; }
+/****** Landline Activation Page CSS *****/
+    .landline-activation-section h1                 { font-size: 38px; line-height: 50px; }
+    .landline-activation-section .jcf-select-text   { font-size: 20px; line-height: 65px; }
+    .landline-activation-section .jcf-list .jcf-option  { font-size: 16px; line-height: 40px; }
+    .landline-activation-section .simple-btn        { font-size: 20px; line-height: 60px; }
+    /*.add                                                        { margin-top: 10px; }*/
+    .auto-reload-main-block .inner-list p.name    { display: block; }
+    .group-name                                   { width: 300px; margin: 0px 40px; font-size: 13px; vertical-align: middle; }
+     /****** GPRS *******/
+     .zone-block                                            { margin-bottom: 30px; }
+    .zone-header                                            { padding: 23px 20px; }
+    .zone-body                                              { padding: 30px 20px; }
+    .zone-footer                                            { padding: 0 20px 25px; }
+    .zone-footer .btn                                       { padding: 15px 30px; font-size: 14px;}
+    /**** Geolocalisation ****/
+    .no-location                                            { width: 70%; }
+    .no-location h2                                         { font-size: 25px; line-height: 30px;}
+    .no-location .form-control                              { font-size: 13px;}
+    /**** Send SMS ****/
+    .send-sms .form-step                                    { width: 80%; }
+    .send-sms .form-control                                 { font-size: 13px; }
+    /**** Web Call ****/
+    .form-vertical                                          { padding: 0 40px; }
+
+}
+@media (max-width: 991px){
+    .shadow-box,
+    .shadow-box.small,
+    .dashboard-advanced-section .simple-shadow.small,
+    .dashboard-advanced-section .simple-shadow.big,
+    .history-page .current-balance-block                { height: auto;}
+    .web-call .shadow-box                               { height: 300px;}
+    .dashboard-advanced-section .simple-shadow.small.add-remove-block       { height: 366px !important; }
+/****** GPRS Package Page CSS *****/
+    .gprs-package-section                       { text-align: center; }
+    .gprs-package-section .shadow-box           { height: auto;}
+    .gprs-package-section .jcf-select           { margin: 10px 0px 25px; float: none;}
+    .gprs-package-header .select2               { float: none; }
+    .gprs-package-section h3                    { display: block;} 
+}
+@media (min-width: 768px) and (max-width: 991px){
+    #sidebar-wrapper .user-info h2              { font-size: 28px; line-height: 30px; }
+    #sidebar-wrapper                            { width: 210px; }
+    #wrapper                                    { padding-left: 210px; }
+    h1                                          { font-size: 36px; line-height: 46px; }
+    h2                                          { font-size: 26px; line-height: 35px; }
+    h3                                          { font-size: 19px; line-height: 24px; }
+    .current-balance-block h1                   { margin: 50px 0px; font-size: 72px; line-height: 82px;}
+    .common-modal  h2                           { font-size: 26px; line-height: 35px; }
+
+/****** Referrals Page CSS *****/
+    .referrals-section                          { padding: 20px; } 
+    .referrals-section .submit-box              { margin-bottom: 30px;} 
+    .referrals-section .submit-box input        { padding: 0px 150px 0px 30px; font-size: 16px; line-height: 50px; }
+    .referrals-section .submit-box button       { width: 150px; padding: 0px 30px; font-size: 14px; line-height: 50px;}
+    .referrals-section .referrals-list h2       { font-size: 26px; line-height: 32px;}
+    .referrals-section .referrals-list li       { padding: 22px 0px; font-size: 16px; line-height: 20px;}
+/****** Add SIM Card Page CSS *****/
+    .add-card-section                           { padding: 40px 15px; }
+    .add-card-section .form-control             { margin-bottom: 32px; padding: 10px; font-size: 50px; line-height: 50px;}
+    .add-card-section .simple-btn               { min-width: 385px; line-height: 50px;}
+/****** Dashboard Advanced Page CSS *****/
+    .call-forward-block,
+    .activation-block,
+    .geolocalisation-block,
+    .statistics-block,                           
+    .dashboard-advanced-section .add-remove-block  { padding: 36px 40px; }
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block .header-section ul li a             { padding: 17px 4px; font-size: 9px;}
+    .auto-reload-main-block .header-section .search-box         { float: none; width: 100%;}
+    .auto-reload-main-block .jcf-select                         { margin: 0px 15px;}
+    .auto-reload-main-block .auto-reload-list                   { text-align: center; }
+    .auto-reload-main-block .auto-reload-list .form-control     { margin: 20px 2px; width: calc(50% - 6px); max-width: inherit; margin-top: 20px;}
+    .auto-reload-main-block .auto-reload-list .inner-list .form-control     { width: calc(50% - 60px);  margin: 10px 0px; }
+    .auto-reload-main-block .inner-list                         { padding: 21px 0px 0px 20px; }
+    .auto-reload-main-block .inner-list p.name                  { display: block; }
+    .auto-reload-main-block .inner-list p.status                { width: 25%;}
+    .auto-reload-main-block .inner-list button                  { margin-right: 10px; }
+    .deposit-funds-block, .transactions-block                   { width: calc(100% - 30px); margin-bottom: 25px;}
+    .deposit-funds-block h1                                     { font-size: 80px;}
+    /*.add                                                        { margin-top: 10px; }*/
+    .group-name                                                 { margin: 0px 20px; font-size: 13px; vertical-align: middle; }
+/****** History Page CSS *****/
+    .align-vertical                                         { position: static; top: auto; transform: none; -moz-transform: none; -ms-transform: none; -webkit-transform: none; -o-transform: none; }
+    .account-details .value                                 { font-size: 17px; overflow-wrap: break-word; }
+    .account-settings-inner > div                           { margin-bottom: 20px; }
+    .history-page .current-balance-block                    { margin-top: 25px; }
+/****** Account Details Page CSS *****/
+    .account-details .value                         { overflow-wrap: break-word; font-size: 17px; line-height: 22px;}
+    .account-settings-inner                         { width: 100%; }
+    .account-settings-page .form-control            { font-size: 22px; line-height: 63px; }
+    .simple-shadow.account-details                  { margin: 30px 0px 50px 0px; padding: 25px 25px 10px; }
+/****** Landline Activation Page CSS *****/
+    .landline-activation-section                            { width: 100%; margin: 20px auto; padding: 0;}
+    .landline-activation-section h1                         { font-size: 30px; line-height: 40px;}
+    .landline-activation-section .jcf-select-text           { font-size: 20px; line-height: 65px; }
+    .landline-activation-section .jcf-list .jcf-option      { font-size: 16px; line-height: 40px; }
+    .landline-activation-section .simple-btn                { font-size: 20px; line-height: 60px; }
+     /****** GPRS *******/
+    .zone-block                                            { margin-bottom: 30px; }
+    .zone-footer .btn                                       { font-size: 16px;}
+     /**** Geolocalisation ****/
+    .no-location                                            { width: calc(100% - 30px); }
+    .no-location h2                                         { font-size: 25px; line-height: 30px;}
+    .no-location .form-control                              { font-size: 13px;}
+    /**** Send SMS ****/
+    .send-sms .form-step                                    { width: 80%; }
+    .send-sms .form-control                                 { font-size: 13px; }
+    /**** Web Call ****/
+    .web-call .shadow-box                                   { margin-top: 30px; }
+}
+
+@media (max-width: 767px){
+    h1                                              { font-size: 24px; line-height: 36px; }
+    h2                                              { font-size: 22px; line-height: 30px; }
+    h3                                              { font-size: 18px; line-height: 24px; }
+    .form-control                                   { padding: 0px 15px;}
+    header                                          { padding-top: 99px; }
+    .navbar-default.dashboard                       { padding: 5px 0px;}
+    .navbar-default.dashboard .navbar-brand         { margin: 8px 15px;}
+    .navbar-default .navbar-toggle .icon-bar        { background: #fff; }
+    .navbar-default .navbar-toggle                  { border-radius: 0px; }
+    .navbar-default .navbar-toggle:hover, 
+    .navbar-default .navbar-toggle:focus            { background: #FFD000; border-color: #FFD000;}
+    .navbar-default .navbar-toggle:hover .icon-bar, 
+    .navbar-default .navbar-toggle:focus .icon-bar  { background: #2A2E3A; }
+    .navbar-default .navbar-collapse                { border: none; box-shadow: none; -webkit-box-shadow: none; }
+    #sideNavbar .navbar-nav.main-menu               { display: block;}
+    .navbar-default.dashboard .navbar-nav.main-menu > li > a        { padding: 15px;}
+    #sideNavbar .navbar-nav.main-menu               { margin: 0px;}
+    .common-modal .btn                              { margin-bottom: 10px; }
+    .data-block .shadow-box .date-filter            { margin: 0 -20px 10px;}
+    .data-block                                     { height: auto !important; }
+
+/******* Sidebar Section CSS Start *******/
+    #sidebar-wrapper                                { height: calc(100% - 63px); }
+    #wrapper.toggled                                { padding-left: 0px !important; }
+    .sidebar-toggle                                 { float: right; margin-right: 10px; padding: 12px; }
+    #sidebar-wrapper .user-info                     { padding: 10px 0px 5px; }
+    #sidebar-wrapper .user-info h2                  { font-size: 18px; line-height: 20px;}
+    #sidebar-wrapper .jcf-select-text               { line-height: 30px; }
+    #sidebar-wrapper .jcf-list .jcf-option          { line-height: 20px;}
+    #sidebar-wrapper .jcf-select-drop .jcf-select-drop-content      { border-radius: 15px;}
+    #sidebar-wrapper .sidebar-menu                  { padding-bottom: 30px; margin: 5px 0px; }
+    #sidebar-wrapper .sidebar-menu li a             { padding: 4px 15px; font-size: 12px; line-height: 15px;} 
+    #sidebar-wrapper .sidebar-bottom-menu           { padding-bottom: 40px; bottom: 36px; padding: 0px;}
+    #sidebar-wrapper .sidebar-bottom-menu li a      { padding: 5px 20px; }
+    #sidebar-wrapper.double-menu .user-info h2      { font-size: 16px; line-height: 16px; }
+    #sidebar-wrapper.double-menu .sidebar-menu li a { font-size: 11px; line-height: 11.5px; }
+    #sidebar-wrapper.double-menu .sidebar-menu.tool-menu { padding-top: 5px; }
+    #sidebar-wrapper.double-menu .sidebar-menu.tool-menu li:first-child { width: 100%;} 
+     #sidebar-wrapper.double-menu .sidebar-menu.tool-menu li            { display: inline-block; width: 49%; }
+    #sidebar-wrapper.double-menu .sidebar-bottom-menu li a  { padding: 3px 20px; }
+/******* Sidebar Section CSS End *******/
+    .simple-btn                                     { min-width: 160px; font-size: 12px; line-height: 40px;}
+    .shadow-box,.jcf-scrollable-wrapper             { margin-bottom: 30px;}
+    .current-balance-block                          { padding: 20px 20px 25px; text-align: center;}
+    .current-balance-block .jcf-select              { width: 100%; margin-top: 5px;}
+    .current-balance-block .jcf-select-text         { line-height: 40px;}
+    .current-balance-block h1                       { margin: 25px 0px; font-size: 40px; line-height: 50px; }
+    .history-block                                  { padding: 20px 20px 0px 20px; }
+    .history-block .top-menu-list                   { margin-top: 15px; float: none;}
+    .history-block .top-menu-list a                 { margin: 0px;}
+    .history-block .history-list                    { padding: 20px 0;}
+    .add-sim-card-block                             { padding-top: 20px;}
+    .add-sim-card-block .number-list                { margin: 24px 15px 0px 15px; }
+    .add-sim-card-block p.number                    { min-width: 47%; font-size: 15px; }
+    .add-sim-card-block a.icon                      { margin-left: 10px; float: right; }
+    .reload-block,
+    .refer-friend-block,
+    .add-remove-block                               { padding: 20px;}
+/****** Referrals Page CSS *****/
+    .referrals-section                              { padding: 0px; }
+    .referrals-section p                            { font-size: 16px; line-height: 20px; }
+    .referrals-section .submit-box                  { margin-bottom: 25px;} 
+    .referrals-section .submit-box input            { padding: 0px 80px 0px 15px; font-size: 13px; line-height: 45px; }
+    .referrals-section .submit-box button           { min-width: 80px; width: 80px; padding: 0px 15px; font-size: 12px; line-height: 45px;}
+    .referrals-section .referrals-list h2           { font-size: 20px; line-height: 26px;}
+    .referrals-section .referrals-list li           { padding: 15px 0px; font-size: 13px; line-height: 18px;}
+/****** Add SIM Card Page CSS *****/
+    .add-card-section                               { padding: 0px; }
+    .add-card-section .form-control                 { margin-bottom: 32px; padding: 30px 15px; font-size: 22px; line-height: 30px;}
+    .add-card-section .simple-btn                   { min-width: 200px; line-height: 45px;}
+/****** GPRS Package Page CSS *****/
+    .gprs-package-section                           { padding: 0px;}
+    .gprs-package-section .package                  { padding: 20px 15px;}
+    .gprs-package-section .package h2               { font-size: 24px; line-height: 30px; }
+    .gprs-package-section .package-feature-list     { margin: 15px 0px; font-size: 16px;}
+    .gprs-package-section .package-feature-list li  { margin-bottom: 8px; width: 100%;}
+    .gprs-package-header .select2                   { margin-left: 0; }
+/****** Geolocalization Page CSS *****/
+    #page-content-wrapper.geolocalization #map      { height: calc(100vh - 63px);}
+/****** Dashboard Advanced Page CSS *****/
+    .call-forward-block,
+    .activation-block,
+    .geolocalisation-block,
+    .statistics-block, 
+    .selection-box,                          
+    .dashboard-advanced-section .add-remove-block   { padding: 30px 15px; }
+    .call-forward-block .form-control               { line-height: 42px; font-size: 14px; }
+    .call-forward-block p                           { margin-bottom: 20px; }
+    .selection-box .jcf-select                      { width: 100%; margin: 0px 0px 15px;}
+    .activation-block .activate-btn                 { margin: 22px auto 0px;}
+    .add-remove-list > ul > li > div                { display: block; width: 100% !important; text-align: center; padding: 5px 0;}
+/****** Auto Reload Page CSS *****/
+    .auto-reload-main-block                                 { margin: 0px; width: 100%;}
+    .auto-reload-main-block .header-section ul li           { display: block;}
+    .auto-reload-main-block .header-section ul li a         { padding: 15px;}
+    .auto-reload-main-block .header-section .search-box     { float: none; width: 100%; padding: 0px 15px;}
+    .auto-reload-main-block .auto-reload-list               { padding: 30px 15px;}
+    .auto-reload-main-block .jcf-select                     { max-width: 170px; min-width: 40%;}
+    .auto-reload-main-block .icon                           { margin: 15px 0px; text-align: center; display: inline-block; vertical-align: top;}
+    .auto-reload-main-block .auto-reload-list .form-control { max-width: 100%; margin-bottom: 10px; font-size: 12px;}
+    .auto-reload-main-block .auto-reload-list .form-control.min-rate    { margin-top: 10px; }
+    .auto-reload-main-block .auto-reload-list > ul > li     { text-align: center; }
+    .auto-reload-main-block .inner-list                     { padding: 20px 0px 0px 0px;}
+    .auto-reload-main-block .inner-list li .card-number     { min-width: 116px; }
+    .auto-reload-main-block .inner-list li .card-balance    { min-width: 72px; }
+    .auto-reload-main-block .inner-list p.name              { display: block; margin: 5px 0px 10px; font-size: 14px;}
+    .auto-reload-main-block .inner-list p.status            { display: block; max-width: 100%; text-align: center;}
+    .auto-reload-main-block .auto-reload-list button        { margin-right: 0px;}
+    .auto-reload-main-block .inner-list .icon               { margin: 10px 0px 0px;}
+    .deposit-funds-block, .transactions-block               { width: 100%; margin: 25px 0px 0px;}
+    .deposit-funds-block h1                                 { font-size: 60px;}
+    .transactions-block .jcf-scrollable                     { padding: 40px 25px 0px 15px;}
+    .transactions-block .transactions-list p.number span    { margin-left: 10px;}
+    .transactions-block .transactions-list p.number         { font-size: 13px;}
+    .transactions-block .transactions-list p.price          { font-size: 15px;}
+    .align-vertical                                         { position: static; top: auto; transform: none; -moz-transform: none; -ms-transform: none; -webkit-transform: none; -o-transform: none; }
+    .group-name                                             { margin: 0px 12px 0px 5px; max-width: 200px; min-width: 40%; padding: 13px 15px; font-size: 13px;}
+/****** Landline Activation Page CSS *****/
+    .landline-activation-section                            { width: 100%; margin: 0px auto 20px; padding: 0;}
+    .landline-activation-section h1                         { font-size: 24px; line-height: 32px;}
+    .landline-activation-section .jcf-select-text           { font-size: 16px; line-height: 50px; }
+    .landline-activation-section .jcf-list .jcf-option      { font-size: 14px; line-height: 32px; }
+    .landline-activation-section .jcf-select .jcf-select-opener { right: 20px;}
+    .landline-activation-section .simple-btn                { min-width: 220px; font-size: 16px; line-height: 45px; }
+    span.jcf-select-country,span.jcf-select-phone           { padding: 0 20px; }
+/****** Account Details Page CSS *****/
+    .account-settings-inner                                 { width: 100%; margin: 20px auto 0; }
+    .account-settings-inner > div                           { padding: 0px; }
+    .account-settings-page .form-control                    { font-size: 17px; line-height: 45px; }
+    .simple-shadow.account-details                          { margin: 40px 0px 30px 0px; padding: 25px 15px 10px; }
+    .account-settings-inner > div                           { margin-bottom: 20px; }
+    .account-details .value                                 { font-size: 15px; overflow-wrap: break-word; }
+    .account-details li                                     { padding: 15px 0; }
+    .deactivate-btn                                         { font-size: 16px; }
+    .account-settings-page .simple-btn                      { font-size: 18px; line-height: 50px; }
+/****** History Page CSS *****/
+    .history-page .history-block                            { height: 500px !important; }
+    .date-filter > ul > li                                  { margin: 5px 0; }
+    /****** GPRS *******/
+    .zone-header                                            { padding: 23px 30px; }
+    .zone-body                                              { padding: 30px; }
+    .zone-footer                                            { padding: 0 30px 25px; }
+    .zone-footer .btn                                       { padding: 10px 25px; font-size: 12px; width: 100%; }
+    /**** Geolocalisation ****/
+    .no-location                                            { width: calc(100% - 30px); }
+    .no-location h2                                         { font-size: 25px; line-height: 30px;}
+    .no-location .form-control                              { font-size: 13px;}
+    /**** Send SMS ****/
+    .send-sms .form-step                                    { width: 100%; }
+    .send-sms .form-control                                 { font-size: 13px;}
+    /**** Web Call ****/
+    .form-vertical                                          { padding: 0 40px; }
+    .web-call .shadow-box                                   { margin-top: 30px; }
+    .data-block .shadow-box .date-filter li .input-group    { width: 100%; }
+    .bootstrap-datetimepicker-widget                        { max-width: 100% !important; }
+}
+
+@media (max-width: 380px){
+    .data-block .shadow-box .date-filter li         { display: block; padding: 5px 0; }
+    .data-block .shadow-box .date-filter li .input-group { margin: 0 auto; }
+}
+
+/* Advance Dashboard Call Forwading Section */
+.dashboard-advanced-section .data-block #frm-redirect .input-group                  { height: 60px; border: 1px solid #D6D9ED; background: #FBFBFE; width: 100%; }
+.dashboard-advanced-section .data-block #frm-redirect .input-group-addon            { padding: 0 20px; width: 50px; border-radius: 0; border: none; background: transparent; line-height: 43px; }
+.dashboard-advanced-section .data-block #frm-redirect .input-group .form-control    { margin: 0; padding-left: 0; box-shadow: none; background: transparent; border: none; }
+/* Advance Dashboard Call Forwading Section */
+
+
+
+

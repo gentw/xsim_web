@@ -1,0 +1,45 @@
+@extends('layouts.app')
+
+@section('banner')
+<section class="banner support text-center">
+    <div class="container">
+        <div class="desc">
+            <h1>Sitemap</h1>
+         
+        </div>
+    </div>
+</section>
+
+@endsection
+
+@section('content')
+<main>
+    <section class="about-page-section">
+        <div class="container">
+          
+            <div class="full-desc sitemap">
+               <ul>
+                <li><a href="https://www.xxsim.com">Home</a></li>
+                <li><a href="https://www.xxsim.com/features">FEATURES</a></li>
+                <li><a href="https://www.xxsim.com/about">ABOUT</a></li>
+                <li><a href="https://www.xxsim.com/online-shop">ONLINE SHOP</a></li>
+                <li><a href="https://www.xxsim.com/support">SUPPORT</a></li>
+                <li><a href="https://www.xxsim.com/quick-start">QUICK START</a></li>
+                <li><a href="https://www.xxsim.com#call-rates">RATES AND COVERAGE</a></li>
+				<li><a href="https://www.xxsim.com/blog">Blog</a></li>
+				<li><a href="https://www.xxsim.com/about-international-sim-card">XXSIM, About us</a></li>
+				<li><a href="https://www.xxsim.com/general-sales-conditions">General Sales Conditions</a></li>
+				<li><a href="https://www.xxsim.com/privacy-policy">Privacy Policy</a></li>
+				<li><a href="https://www.xxsim.com/terms-and-conditions">Terms and Conditions</a></li>
+				<li><a href="https://www.xxsim.com/press">Press</a></li>
+				<li><a href="https://www.xxsim.com/reseller">Become a reseller</a></li>
+				<li><a href="https://www.xxsim.com/corporate">Benefits</a></li>
+				<li><a href="https://www.xxsim.com/online-shop">Order</a></li>
+				
+            </ul>
+            </div>
+        </div>
+    </section>
+  
+</main>
+@endsection

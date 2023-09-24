@@ -1,0 +1,20 @@
+#change-captcha{
+	cursor: pointer;
+}
+.paypal-payment{
+	margin-top: 20px;
+}
+
+.profile-detail{
+   -webkit-filter: grayscale(100%);
+   filter: gray;
+}
+
+.profile-detail:hover {
+   -webkit-filter: none;
+   filter: none;
+}
+input.qty-sim::placeholder {
+  /*font-size : 11px;*/
+}
+

@@ -1,0 +1,35 @@
+@extends('layouts.app')
+
+@section('banner')
+<section class="banner support text-center">
+    <div class="container">
+        <div class="desc">
+            <h1>Sitemap</h1>
+         
+        </div>
+    </div>
+</section>
+
+@endsection
+
+@section('content')
+<main>
+    <section class="about-page-section">
+        <div class="container">
+          
+            <div class="full-desc sitemap">
+               <ul>
+                <li><a href="https://www.xxsim.com">Home</a></li>
+                <li><a href="https://www.xxsim.com/features">FEATURES</a></li>
+                <li><a href="https://www.xxsim.com/about">ABOUT</a></li>
+                <li><a href="https://www.xxsim.com/online-shop">ONLINE SHOP</a></li>
+                <li><a href="https://www.xxsim.com/support">SUPPORT</a></li>
+                <li><a href="https://www.xxsim.com/quick-start">QUICK START</a></li>
+                <li><a href="https://www.xxsim.com#call-rates">RATES AND COVERAGE</a></li>
+            </ul>
+            </div>
+        </div>
+    </section>
+  
+</main>
+@endsection

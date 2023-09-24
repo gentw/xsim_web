@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="description" content="" />
+<meta name="author" content="" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<?php //echo "current page===" . $_SERVER['REQUEST_URI']; 
+if($_SERVER['REQUEST_URI'] == '/'){ 
+echo '<title>International SIM Card - International Roaming Packs | XXSIM</title>';
+echo '<meta name="description" content="XXSIM offers the best international SIM Card at affordable rates. We provide free incoming calls and the best rates on outgoing calls as well as roaming data.  ">';} 
+elseif($_SERVER['REQUEST_URI'] == '/about-internation-sim-card'){
+echo '<title>Best Prepaid International SIM Card - Carte SIM Internationale | XXSIM</title>';
+echo '<meta name="description" content="XXSIM provides the best Prepaid International SIM Card at a fraction of the usual price. We have been active for more than 8 years worldwide and provide innovative new products and services for mobile users.">';}
+elseif($_SERVER['REQUEST_URI'] == '/online-shop'){
+echo '<title>Buying European SIM Cards - XXSIM International Roaming SIM Card</title>';
+echo '<meta name="description" content="If you are looking to buy a SIM Card in Europe, visit XXSIM. We provide international SIM Card at affordable rates. ">';}
+else{
+?>
+<title>XXSIM International roaming SIM card</title>
+<?php } ?>
+{{-- <br> --}}
+<?php 
+if($_SERVER['REQUEST_URI'] == '/'){ 
+echo '<link rel="canonical" href="https://www.xxsim.com/" />';}
+elseif($_SERVER['REQUEST_URI'] == '/online-shop'){
+echo '<link rel="canonical" href="https://www.xxsim.com/online-shop" />';}
+elseif($_SERVER['REQUEST_URI'] == '/support'){
+echo '<link rel="canonical" href="https://www.xxsim.com/support" />';}
+elseif($_SERVER['REQUEST_URI'] == '/features'){
+echo '<link rel="canonical" href="https://www.xxsim.com/features" />';}
+elseif($_SERVER['REQUEST_URI'] == '/about-international-sim-card'){
+echo '<link rel="canonical" href="https://www.xxsim.com/about-international-sim-card" />';}
+elseif($_SERVER['REQUEST_URI'] == '/press'){
+echo '<link rel="canonical" href="https://www.xxsim.com/press" />';}
+elseif($_SERVER['REQUEST_URI'] == '/online-shop/recharge'){
+echo '<link rel="canonical" href="https://www.xxsim.com/online-shop/recharge" />';}
+elseif($_SERVER['REQUEST_URI'] == '/quick-start'){
+echo '<link rel="canonical" href="https://www.xxsim.com/quick-start" />';}
+elseif($_SERVER['REQUEST_URI'] == '/general-sales-conditions'){
+echo '<link rel="canonical" href="https://www.xxsim.com/general-sales-conditions" />';}
+elseif($_SERVER['REQUEST_URI'] == '/corporate'){
+echo '<link rel="canonical" href="https://www.xxsim.com/corporate" />';}
+elseif($_SERVER['REQUEST_URI'] == '/reseller'){
+echo '<link rel="canonical" href="https://www.xxsim.com/reseller" />';}
+elseif($_SERVER['REQUEST_URI'] == '/sitemap'){
+echo '<link rel="canonical" href="https://www.xxsim.com/sitemap" />';}
+elseif($_SERVER['REQUEST_URI'] == '/terms-and-conditions'){
+echo '<link rel="canonical" href="https://www.xxsim.com/terms-and-conditions" />';}
+elseif($_SERVER['REQUEST_URI'] == '/privacy-policy'){
+echo '<link rel="canonical" href="https://www.xxsim.com/privacy-policy" />';}
+elseif($_SERVER['REQUEST_URI'] == '/login'){
+echo '<link rel="canonical" href="https://www.xxsim.com/login" />';}
+elseif($_SERVER['REQUEST_URI'] == '/user-manual'){
+echo '<link rel="canonical" href="https://www.xxsim.com/user-manual" />';}
+elseif($_SERVER['REQUEST_URI'] == '/register'){
+echo '<link rel="canonical" href="https://www.xxsim.com/register" />';}
+elseif($_SERVER['REQUEST_URI'] == '/blog/'){
+echo '<link rel="canonical" href="https://www.xxsim.com/blog/" />';}
+elseif($_SERVER['REQUEST_URI'] == '/troubleshooting'){
+echo '<link rel="canonical" href="https://www.xxsim.com/troubleshooting" />';}
+elseif($_SERVER['REQUEST_URI'] == '/product-questions'){
+echo '<link rel="canonical" href="https://www.xxsim.com/product-questions" />';}
+elseif($_SERVER['REQUEST_URI'] == '/first-steps'){
+echo '<link rel="canonical" href="https://www.xxsim.com/first-steps" />';}
+elseif($_SERVER['REQUEST_URI'] == '/general-questions'){
+echo '<link rel="canonical" href="https://www.xxsim.com/general-questions" />';}
+?>
+<!--Favicon Included-->
+<link rel="apple-touch-icon" sizes="57x57" href="{{ asset('front/images/favicon.ico/apple-icon-57x57.png') }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ asset('front/images/favicon.ico/apple-icon-60x60.png') }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ asset('front/images/favicon.ico/apple-icon-72x72.png') }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('front/images/favicon.ico/apple-icon-76x76.png') }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ asset('front/images/favicon.ico/apple-icon-114x114.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('front/images/favicon.ico/apple-icon-120x120.png') }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ asset('front/images/favicon.ico/apple-icon-144x144.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('front/images/favicon.ico/apple-icon-152x152.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('front/images/favicon.ico/apple-icon-180x180.png') }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('front/images/favicon.ico/android-icon-192x192.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('front/images/favicon.ico/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('front/images/favicon.ico/favicon-96x96.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('front/images/favicon.ico/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ asset('front/images/favicon.ico/manifest.json') }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ asset('front/images/favicon/ms-icon-144x144.png') }}">
+<meta name="theme-color" content="#ffffff">
+<meta name="csrf_token" content="{{csrf_token()}}">
+<!--Font Awsome Included-->
+<link href="{{ asset('front/css/fontawesome.css') }}" type="text/css" rel="stylesheet" />
+<!-- Bootstrap -->
+<link href="{{ asset('front/css/bootstrap.css') }}" rel="stylesheet">
+<!-- Slick -->
+<link href="{{ asset('front/css/slick.css') }}" rel="stylesheet">
+<link href="{{ asset('front/css/slick-theme.css') }}" rel="stylesheet">
+<link href="{{ asset('front/css/jcf.css') }}" rel="stylesheet">
+<link href="{{ asset('front/css/select2.css') }}" rel="stylesheet">
+<!--Extra Style Included-->
+<link href="{{ asset('global/plugins/bootstrap-toastr/toastr.min.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('front/css/bootstrap-datetimepicker.css') }}" rel="stylesheet" type="text/css" />
+<!-- <link href="{{ asset('global/css/jquery.datetextentry.css') }}" rel="stylesheet" type="text/css" /> -->
+<link href="{{ asset('global/css/custom.css'). "?" . filemtime(public_path('global/css/custom.css')) }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('front/css/custom.css') }}" rel="stylesheet" type="text/css" />
+<!--Main Style Included-->
+<link href="{{ asset('front/css/style.css'). "?" . filemtime(public_path('front/css/style.css'))  }}" type="text/css" rel="stylesheet" />
+@stack('page_css')
+<noscript><meta http-equiv="refresh" content="0; URL={{ route('no-script') }}"></noscript>
+<!--Main Js Included-->
+<script src="{{ asset('front/js/lib/jquery.js') }}" type="text/javascript"></script>
+<script src="{{ asset('front/js/modernizr.js') }}" type="text/javascript"></script>
+<script src="{{ asset('front/js/slick.js') }}" type="text/javascript"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ asset('front/js/bootstrap.js') }}"></script>
+<script src="{{ asset('front/js/jcf.js') }}"></script>
+<script src="{{ asset('front/js/jcf.select.js') }}"></script>
+<script src="{{ asset('front/js/jcf.checkbox.js') }}"></script>
+<script src="{{ asset('front/js/select2.full.js') }}"></script>
+<!--Extra Js Included-->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="{{ asset('front/js/html5shiv.min.js') }}"></script>
+<script src="{{ asset('front/js/respond.min.js') }}"></script>
+<![endif]-->
+<script type="text/javascript">
+/*
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+var msViewportStyle = document.createElement('style');
+msViewportStyle.appendChild(
+document.createTextNode(
+'@-ms-viewport{width:auto!important}'
+)
+);
+document.querySelector('head').appendChild(msViewportStyle);
+}
+*/
+</script>
+<script type="text/javascript">
+var GLOBAL_ASSET = "{{ asset('global') }}";
+var CARD_API_URL = "{{ route('front_card_api') }}";
+var CAPTCHA_URL = "{{ route('check_captcha') }}";
+var CHECK_LOGIN_URL = "{{ route('check_login') }}";
+var CHECK_REGISTER_URL = "{{ route('check_register') }}";
+</script>
+<script src="//tracking.campaignsdashboard.com/js/iframeResizer.contentWindow.min.js"></script>
+<script type="text/javascript">if (typeof hmtracker == 'undefined') { window.hmtParentUrl = "//tracking.campaignsdashboard.com/"; var hmt_script = document.createElement('script'),hmt_purl = encodeURIComponent(location.href).replace('.', '~');hmt_script.type = "text/javascript";hmt_script.src = "//tracking.campaignsdashboard.com/?projectname=www.xxsim.com&uid=f7ee676eeaed523dd0492fc9335c51bc8b74a108&purl="+hmt_purl;document.getElementsByTagName('head')[0].appendChild(hmt_script);} var hmtParallaxScript = document.createElement('script'); hmtParallaxScript.src = "//tracking.campaignsdashboard.com/js/parallax-script.js"; document.head.appendChild(hmtParallaxScript); </script>
+</head>
+@php
+  $user_agent = htmlentities($_SERVER['HTTP_USER_AGENT'], ENT_QUOTES, 'UTF-8');
+  preg_match('/(Version)[ \/]([\d]+)/', $user_agent, $version);
+  if (preg_match('~MSIE|Internet Explorer~i', $user_agent) || (strpos($user_agent, 'Trident/7.0; rv:11.0') !== false) || (stripos( $user_agent, 'Safari') !== false && !strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') && (empty($version[2]) || (!empty($version[2]) && $version[2] < 9)))){
+      $js_not_proper = true;
+  }
+  else{
+      $js_not_proper = false;
+  }
+@endphp
+<body @if($js_not_proper) class="old-browsers" @endif>
+<!--******************* Header Section Start *********************-->
+    <header>
+      @if($js_not_proper)
+            <div class="ie-browser">
+                <p>Please open our site on <a href="https://www.google.com/intl/en_in/chrome/" target="_blank">Google Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a> for best experience</p>
+            </div>
+        @endif
+        <div class="google-translate">
+            <div class="col-sm-6 hidden-xs">
+                <div class="head-support">
+                    <p>Support <a href="tel:+37254609000">+37254609000</a></p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div id="google_translate_element"></div> 
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        @include('shared.header')
+    </header>
+    <!--******************* Banner Section Start *********************-->
+    @yield('banner')
+    <!--******************* Banner Section End *********************-->
+    <!--******************* Header Section End *********************-->
+
+    <!--******************* Middle Section Start ******************-->
+    @yield('content')
+    <!--******************* Middle Section End ******************-->
+
+    <!-- BEGIN FLASH MESSAGE CONTAIN -->
+    @include('flash::message')
+    <!-- END FLASH MESSAGE CONTAIN -->
+
+    <!--******************* Footer Section Start ******************-->
+    <footer>
+        @include('shared.footer')
+    </footer>
+    <!--******************* Footer Section End ******************-->
+
+    <!-- Extra Javascript -->
+    <script src="{{ asset('global/plugins/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('global/plugins/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('global/plugins/bootstrap-toastr/toastr.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('front/js/moment.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('front/js/bootstrap-datetimepicker.min.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('global/js/jquery.datetextentry.js') }}"></script>
+    <script src="{{ asset('global/js/custom.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('front/js/custom.js') }}" type="text/javascript"></script>
+    @stack('page_js')
+
+    <script>
+        $(function() {
+            jcf.replaceAll();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.new-feature-slider').slick({
+            arrows: false,
+            dots: true,
+          });
+          var width = $(window).width();
+          if ( window.location.hash ) scroll(0,0);
+            setTimeout( function() { scroll(0,0); }, 1);
+            $(function(){
+                 $('a[href*="#"]:not([href="#"]), a.accordion-link').not('[class*=no-scroll-link]').click(function() {                   
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                      if (target.length) {                        
+                        if(width < 768){
+                            $('html, body').animate({
+                              scrollTop: target.offset().top - 105
+                            }, 1000);
+                        }else{
+                            $('html, body').animate({
+                              scrollTop: target.offset().top
+                            }, 1000);
+                        }
+                        return false;
+                      }
+                    }
+                });
+                 if(window.location.hash) {
+                    // smooth scroll to the anchor id                    
+                    if(width < 768){
+                        $('html, body').animate({
+                            scrollTop: $(window.location.hash).offset().top - 105
+                        }, 1000);
+                    }else{
+                        $('html, body').animate({
+                            scrollTop: $(window.location.hash).offset().top
+                        }, 1000);
+                    }
+                }
+            })    
+        });
+    </script>
+
+    <script>
+        toastr.options = {
+          "closeButton": true,
+          "debug": false,
+          "positionClass": "toast-top-right",
+          "onclick": null,
+          "preventDuplicates": true,
+          "showDuration": "1000",
+          "hideDuration": "1000",
+          "timeOut": "5000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        }
+        $('[data-toggle="tooltip"]').tooltip();
+    </script>
+    
+    @stack('scripts')
+
+    <script type="text/javascript">
+        if(!navigator.cookieEnabled) {
+            window.location.href = "{{ route('no-cookie') }}";
+        }
+    </script>
+
+    <script type="text/javascript">
+        if("{{ session('status') }}" != ''){
+            showMessage(200, "{{ session('status') }}");
+        }
+    </script>
+
+    <!-- Start of xxsim Zendesk Widget script -->
+    <script>/*<![CDATA[*/window.zE||(function(e,t,s){var n=window.zE=window.zEmbed=function(){n._.push(arguments)}, a=n.s=e.createElement(t),r=e.getElementsByTagName(t)[0];n.set=function(e){ n.set._.push(e)},n._=[],n.set._=[],a.async=true,a.setAttribute("charset","utf-8"), a.src="https://static.zdassets.com/ekr/asset_composer.js?key="+s, n.t=+new Date,a.type="text/javascript",r.parentNode.insertBefore(a,r)})(document,"script","8b8405b5-a117-483a-ba87-6b8139bb37c3");/*]]>*/</script>
+    <!-- End of xxsim Zendesk Widget script -->
+    <!-- Google Translate -->
+     <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+        }   
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109237539-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109237539-1');
+    </script>
+
+<!--*********************** All End ************************-->
+</body>
+</html>

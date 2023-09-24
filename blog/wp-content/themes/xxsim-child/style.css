@@ -1,0 +1,77 @@
+/*
+Theme Name: XXSIM Child Theme
+Description: XXSIM Child Theme
+Version: 1.0.0
+Template: xxsim
+Text Domain: xxsim-child
+Domain Path: /languages/
+
+
+*/
+
+@import url("../xxsim/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('fonts/SegoeUI.eot');
+    src: url('fonts/SegoeUI.eot?#iefix') format('embedded-opentype'),
+        url('fonts/SegoeUI.woff2') format('woff2'),
+        url('fonts/SegoeUI.woff') format('woff'),
+        url('fonts/SegoeUI.ttf') format('truetype'),
+        url('fonts/SegoeUI.svg#SegoeUI') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri Light';
+    src: url('fonts/Calibri-Light.eot');
+    src: url('fonts/Calibri-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Calibri-Light.woff2') format('woff2'),
+        url('fonts/Calibri-Light.woff') format('woff'),
+        url('fonts/Calibri-Light.ttf') format('truetype'),
+        url('fonts/Calibri-Light.svg#Calibri-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri Bold';
+    src: url('fonts/Calibri-Bold.eot');
+    src: url('fonts/Calibri-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Calibri-Bold.woff2') format('woff2'),
+        url('fonts/Calibri-Bold.woff') format('woff'),
+        url('fonts/Calibri-Bold.ttf') format('truetype'),
+        url('fonts/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri.eot');
+    src: url('fonts/Calibri.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Calibri.woff2') format('woff2'),
+        url('fonts/Calibri.woff') format('woff'),
+        url('fonts/Calibri.ttf') format('truetype'),
+        url('fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+#myNavbar .navbar-nav.main-menu		{ position: relative; bottom: -2px; }
+.navbar-nav > li					{ padding: 0; }
+header.main-header 					{ z-index: 1055; }
+.scroll-to-top:hover				{ background-color: #ffd000; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6	{ font-family: "Poppins",sans-serif; color: #ffd000; }
+
+.entry-title a:hover, .entry-title a:focus { color: #ffd000; }
+
+.form-control.search-query	{ padding: 6px 12px; }
+
+@media(max-width: 767px){
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background: #ffd000; }
+}

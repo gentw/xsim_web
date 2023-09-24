@@ -1,0 +1,83 @@
+.login .content .forget-form{
+    display: block !important;
+}
+.logo-main{
+    width:300px !important;
+}
+.logo-header{
+    width:180px !important;
+    height: 50px;
+    margin: 16px 10px 0 !important;
+}
+
+#overlayDocument{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+    text-align:center
+}
+#overlayDocument img{
+    position: absolute;
+    top:50%;
+    left: calc(50% - 16px);
+}
+
+/* ----- Message Transperancy Removed-------*/
+.toast {
+  opacity: 1 !important;
+}
+
+#toast-container > div {
+  opacity: 1 !important; 
+}
+/* ----- Message Transperancy Removed-------*/
+
+.mendatory{
+    color: red;
+    font-size: 15px;
+}
+
+.portlet-datatable .btn{
+    margin-bottom: 10px !important;
+}
+
+.delete_all_link{
+    margin-left: 20px;
+}
+
+.form-horizontal .control-label{
+    text-align: left;
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 130px;
+}
+
+.dataTable > thead > tr > th[class*="sort"]:after{
+    content: "" !important;
+}
+
+/* start remove autofill background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+/* end remove autofill background */
+
+/************************/
+/* Tool tip css - Start */
+/*                      */
+button.tooltip-btn    { background: transparent; border: none;}
+/* Tool tip css - End */

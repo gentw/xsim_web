@@ -1,0 +1,172 @@
+<?php
+
+use App\Models\Card;
+use App\Models\National_number;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Auth::routes();
+// Route::get('/clear-cache', function() {
+//     $exitCode = Artisan::call('view:clear');
+//     $exitCode = Artisan::call('cache:clear');
+//     flash('Cache cleared sucessfully.')->success();
+//     return redirect()->route('home');
+// });
+
+//Route::get('export_expire_card_excel', 'HomeController@get_expired_cards')->name('export_expire_card_excel');
+
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('features', 'FrontController@features')->name('features');
+Route::get('about-international-sim-card', 'FrontController@about')->name('about');
+Route::match(['get', 'post'], 'online-shop/{type?}', 'FrontController@online_shop')->name('online_shop');
+Route::get('support', 'FrontController@support')->name('support');
+Route::get('reseller', 'FrontController@reseller')->name('reseller');
+Route::get('press', 'FrontController@press')->name('press');
+Route::get('press-inner', 'FrontController@press_inner')->name('press_inner');
+Route::get('general-sales-conditions', 'FrontController@general_sales')->name('general_sales');
+Route::get('privacy-policy', 'FrontController@privacy_policy')->name('privacy_policy');
+Route::get('terms-and-conditions', 'FrontController@terms')->name('terms');
+Route::post('contact-email', 'ActionController@contact_mail')->name('contact-email');
+Route::post('contact-phone', 'ActionController@contact_phone')->name('contact-phone');
+Route::get('sitemap', 'FrontController@sitemap')->name('sitemap');
+
+// Route::post('paypal-creditcard-payment', 'PaypalPaymentController@paywithCreditCard')->name('card_payment');
+// Route::post('paypal-payment', 'PaypalPaymentController@paywithPaypal')->name('paypal_payment');
+Route::post('paypal-payment-success', 'PaypalController@payment_success')->name('paypal_payment_success');
+Route::get('paypal-payment-fails', 'PaypalController@payment_error')->name('paypal_payment_fail');
+Route::any('paypal-payment-notify', 'PaypalController@payment_notify')->name('paypal_payment_notify');
+// Route::post('buy-card', 'ActionController@ajax_buy_card')->name('buy_card');
+// Route::post('add-card-reload', 'ActionController@add_card_reload_data')->name('add_card_reload_record');
+Route::post('make-payment', 'StripeController@make_payment')->name('make_payment');
+Route::post('make-paypal-payment', 'PaypalController@make_payment')->name('make_paypal_payment');
+Route::post('buy-regular-card', 'ActionController@buy_regular_card')->name('buy_regular_card');
+
+
+Route::post('check-card', 'CardApiController@card_api')->name('front_card_api');
+Route::post('check-captcha', 'UserController@check_captcha')->name('check_captcha');
+Route::post('unique-email', 'UserController@checkUniqueEmail')->name('uniqueemail');
+Route::post('unique-email-others', 'UserController@checkUniqueEmailOtherthanMe')->name('uniqueemailothers');
+Route::post('check-login', 'UserController@check_login')->name('check_login');
+Route::post('check-register', 'UserController@check_registration')->name('check_register');
+Route::post('change-rate', 'HomeController@change_rate')->name('change_rate');
+Route::post('apply-coupon', 'UserController@apply_coupon')->name('apply_coupon');
+Route::post('used-coupon', 'UserController@used_coupon')->name('used_coupon');
+
+
+/* support page routes */
+Route::get('general-questions', function() { return view('pages.front.general-questions'); })->name('general-questions');
+Route::get('product-questions', function() { return view('pages.front.product-questions'); })->name('product-questions');
+Route::get('first-steps', function() { return view('pages.front.first-steps'); })->name('first-steps');
+Route::get('troubleshooting', function() { return view('pages.front.troubleshooting'); })->name('troubleshooting');
+Route::get('user-manual', function() { return view('pages.front.user-manual'); })->name('user-manual');
+
+Route::get('quick-start', function() { return view('pages.front.quick_start'); })->name('quick_start');
+
+Route::get('group-deposit/{group_id}/{group_name}', function($group_id = 0, $group_name = '') { return view('pages.front.group_deposit')->with(['group_id' => $group_id, 'group_name' => $group_name]); })->name('group-deposit');
+
+/* Feature page routes */
+Route::get('corporate', function() { return view('pages.front.corporate'); })->name('corporate');
+Route::get('private', function() { return view('pages.front.private'); })->name('private');
+
+/* If javascript is disable */
+Route::get('no-script/{page?}', function($page = 'front'){ return view('errors.no-script', compact('page')); })->name('no-script');
+
+/* If cookie is disable */
+Route::get('no-cookie/{page?}', function($page = 'front'){ return view('errors.no-cookie', compact('page')); })->name('no-cookie');
+
+/* User verify account route */
+Route::get('register/verify/{confirmationCode}','Auth\RegisterController@confirm');
+
+Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard', 'middleware' => ['revalidate', 'auth', 'user.active']], function (){
+	Route::get('simple', 'HomeController@index')->name('dashboard.home');
+	Route::get('advance', 'HomeController@advance')->name('dashboard.home.advance');
+	Route::post('remove/widget', 'HomeController@removeWidget')->name('remove_widget');
+	Route::post('add/widget', 'HomeController@addWidget')->name('add_widget');
+	Route::get('{dashboard}/profile', 'UserController@profile')->name('dashboard.profile');
+	Route::get('add-card', 'DashboardController@add_card')->name('dashboard.add_card');
+	Route::get('referrals', 'DashboardController@referrals')->name('dashboard.referrals');
+	Route::get('history', 'DashboardController@history')->name('dashboard.history');
+	Route::get('{dashboard}/auto-reload', 'DashboardController@auto_reload')->name('dashboard.auto_reload');
+	Route::get('geolocalization', 'DashboardController@geolocalization')->name('dashboard.geolocalization');
+	Route::get('landline-activation', 'DashboardController@landline_activation')->name('dashboard.landline_activation');
+	Route::get('landline-activation-numbers', 'DashboardController@landline_activation_number')->name('dashboard.landline_activation_number');
+	Route::get('gprs', 'DashboardController@zone_list')->name('dashboard.gprs');
+	Route::get('gprs-packages/{zone}', 'DashboardController@gprs_package')->name('dashboard.gprs_package');
+
+	Route::post('call-card-api', 'CardApiController@card_api')->name('call_card_api');
+
+	Route::post('add-card', 'ActionContoller@add_card')->name('action_add_card');
+	Route::post('check-card', 'ActionContoller@check_card')->name('action_check_card');
+	Route::post('remove-card', 'ActionContoller@remove_card')->name('action_remove_card');
+	Route::post('send-referal-mail', 'ActionContoller@refer')->name('action_referal');
+	// Route::post('unique-email-others', 'UserController@checkUniqueEmailOtherthanMe')->name('uniqueemailothers');
+	Route::post('edit-profile', 'ActionContoller@update_profile')->name('edit_profile');
+	Route::post('national-numbers', 'ActionContoller@national_numbers')->name('get_national_numbers');
+	Route::post('get-packages', 'ActionContoller@get_packages')->name('get_packages');
+	Route::post('add-national-number', 'ActionContoller@add_national_number')->name('add_national_number');
+	Route::post('change-number-status', 'ActionContoller@change_number_status')->name('change_number_status');
+
+	Route::post('get-groups', 'ActionContoller@get_groups')->name('get_corp_groups');
+	Route::post('add-group', 'ActionContoller@add_group')->name('add_group');
+
+	Route::post('set-session-card', function (){
+		Session::put('card_selected', request()->input('card'));
+	})->name('set_session_card');
+
+
+	Route::get('sendSMS/{dashboard?}', function ($dashboard = ''){
+		$advance = 'n';
+        if($dashboard == 'advance')
+            $advance = 'y';
+		return view('pages.dashboard.send_sms')->with('advance_view', $advance);
+	})->name('dashboard.send_sms');
+
+	Route::get('webCall/{dashboard?}', function ($dashboard = ''){
+		$advance = 'n';
+        if($dashboard == 'advance')
+            $advance = 'y';
+		return view('pages.dashboard.web_call')->with('advance_view', $advance);
+	})->name('dashboard.web_call');
+
+	Route::post('add-reload-data', 'DashboardController@add_reload_data')->name('add_reload_data');
+
+	Route::post('get-group-cards', 'ActionContoller@get_cards')->name('get_group_cards');
+});
+
+/* Admin Auth routes */
+Route::group(['prefix' => 'admin'], function () {
+  Route::get('/login', 'AdminAuth\LoginController@showLoginForm');
+  Route::post('/login', 'AdminAuth\LoginController@login');
+  Route::post('/logout', 'AdminAuth\LoginController@logout');
+
+  Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm');
+  Route::post('/register', 'AdminAuth\RegisterController@register');
+
+  Route::post('/password/email', 'AdminAuth\ForgotPasswordController@sendResetLinkEmail');
+  Route::post('/password/reset', 'AdminAuth\ResetPasswordController@reset');
+  Route::get('/password/reset', 'AdminAuth\ForgotPasswordController@showLinkRequestForm');
+  Route::get('/password/reset/{token}', 'AdminAuth\ResetPasswordController@showResetForm');
+});
+
+Route::get('/en/csc/balanceLimitNotification.html', 'NotificationController@corp_balance_limit');
+
+Route::get('logout', function (){
+	Auth::logout();
+	return redirect()->route('home');
+});
+
+Route::get('/artisan_cmd',function(){
+	Artisan::call('view:clear');
+});
+// Route::get('test-card-api', function (){
+	// print_r(file_get_contents("http://whitelabel.travelsim.com/send_server_ip.php"));
+// });

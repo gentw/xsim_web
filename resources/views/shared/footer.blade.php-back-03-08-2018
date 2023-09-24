@@ -1,0 +1,60 @@
+<div class="support-no-section">
+    <div class="container">
+        <p>Support <a href="tel:+37254609000">+37254609000</a></p>
+    </div>
+</div>
+<section class="footer-inner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-6">
+                <h3 class="title yellow-color">PRIVATE CUSTOMERS</h3>
+                <ul>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('features') }}">What is XXSIM?</a></li>
+                    <li><a href="{{ route('home') . '#call-rates' }}">Rates and Coverage</a></li>
+                    <li><a href="{{ route('online_shop') }}">Online Shop</a></li>
+                    <li><a href="{{ route('online_shop', 'recharge') }}">Recharge</a></li>
+                    <li><a href="{{ route('support') }}">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3 class="title yellow-color">BUSINESS CUSTOMERS</h3>
+                <ul>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('about') }}">What is XXSIM?</a></li>
+                    <li><a href="{{ route('corporate') }}">Benefits</a></li>
+                    <li><a href="{{ route('online_shop') }}">Order</a></li>
+                    <li><a href="{{ route('support') }}">Support</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3 class="title yellow-color">PARTNERS</h3>
+                <ul>
+                    <li><a href="{{ route('reseller') }}">Become a reseller</a></li>
+                    <!-- <li><a href="https://xxsim.com/?action=files.get&id=31">Affiliation</a></li> -->
+                    <li><a href="{{ route('press') }}">Press</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3 class="title yellow-color">LEGAL INFORMATION</h3>
+                <ul>
+                    <li><a href="{{ route('about') }}">XXSIM, About us</a></li>
+                    <li><a href="{{ route('general_sales') }}">General Sales Conditions</a></li>
+                    <li><a href="{{ route('privacy_policy') }}">Privacy Policy</a></li>
+                    <li><a href="{{ route('terms') }}">Terms and Conditions</a></li>
+                    <li><a href="{{ route('press') }}">Press</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="footer-logo">
+                    <a href="{{ route('home') }}"><img src="{{ asset('front/images/footer-logo.png') }}" alt="logo"></a>
+                </div>
+                {{-- 
+                <div class="support-no-box">
+                    <p>Support: <a href="tel:+3726160084">+3726160084</a></p>
+                </div>
+                --}}
+            </div>
+        </div>
+    </div>
+</section>

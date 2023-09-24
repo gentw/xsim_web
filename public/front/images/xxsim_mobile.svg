@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="327px" height="624px" viewBox="0 0 327 624" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>xxsim_animation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#EEEEEE" offset="0%"></stop>
+            <stop stop-color="#DDDDDD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EEEEEE" offset="65.9786376%"></stop>
+            <stop stop-color="#DDDDDD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#D1D1D1" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#CECECE" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#E2E2E2" offset="0%"></stop>
+            <stop stop-color="#F3F3F3" offset="49.798943%"></stop>
+            <stop stop-color="#F9F9F9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#DCDCDC" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-263.000000, -220.000000)">
+            <g id="xxsim_animation" transform="translate(263.000000, 220.000000)">
+                <g id="Shadow" transform="translate(0.000000, 593.000000)">
+                    <image id="Bitmap" x="0" y="0" width="327" height="31" xlink:href="data:image/png;base64,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"></image>
+                </g>
+                <g id="Mute" transform="translate(11.000000, 73.000000)" fill="url(#linearGradient-1)">
+                    <g id="path-4-link">
+                        <rect id="path-4" x="0.83950617" y="0.7739938" width="5.75925926" height="23.3302374" rx="2.87962963"></rect>
+                    </g>
+                </g>
+                <g id="Volume-Down" transform="translate(12.000000, 172.000000)" fill="url(#linearGradient-1)">
+                    <g id="path-6-link">
+                        <rect id="path-6" x="0.47942387" y="0.769866" width="5.75925926" height="40.3550052" rx="2.87962963"></rect>
+                    </g>
+                </g>
+                <g id="Volume-Up" transform="translate(12.000000, 122.000000)" fill="url(#linearGradient-1)">
+                    <g id="path-8-link">
+                        <rect id="path-8" x="0.47942387" y="0.956656" width="5.75925926" height="40.3550052" rx="2.87962963"></rect>
+                    </g>
+                </g>
+                <g id="Power" transform="translate(308.000000, 122.000000)" fill="url(#linearGradient-1)">
+                    <g id="path-10-link">
+                        <rect id="path-10" x="0.761317" y="0.326109" width="5.75925926" height="40.3550052" rx="2.87962963"></rect>
+                    </g>
+                </g>
+                <path d="M14.3991769,214.42014 C14.3991769,213.569558 15.6790123,212.718977 15.6790123,211.863777 L15.6790123,124.234838 C15.6790123,123.353314 14.3991769,122.47179 14.3991769,121.590266 L14.3991769,64.0063722 C14.3991769,28.656629 43.0596437,-5.68434189e-14 78.3937945,-5.68434189e-14 L248.606205,-5.68434189e-14 C283.949457,-5.68434189e-14 312.600823,28.6614414 312.600823,64.002063 L312.600823,121.794789 C312.600823,122.614993 311.320988,123.435196 311.320988,124.21775 L311.320988,160.852458 C311.320988,161.672302 312.600823,162.492039 312.600823,163.311662 L312.600823,543.84442 C312.600823,579.192215 283.940356,607.847265 248.606205,607.847265 L78.3937945,607.847265 C43.0505432,607.847265 14.3991769,579.199609 14.3991769,543.83888 L14.3991769,214.42014 Z M31,72.207431 L31,536.28999 L295.925926,536.28999 L295.925926,72.207431 L31,72.207431 Z" id="Combined-Shape" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
+                <g id="Face" transform="translate(18.000000, 3.000000)" fill-rule="nonzero">
+                    <g id="path-13-link">
+                        <rect id="Rectangle" stroke="#4A4A4A" stroke-width="4" x="13" y="69" width="265" height="465"></rect>
+                        <path d="M0.2386831,60.7771242 C0.2386831,27.6434399 27.0982528,0.78328173 60.2369281,0.78328173 L230.763072,0.78328173 C263.899188,0.78328173 290.761317,27.6442396 290.761317,60.7771242 L290.761317,541.070141 C290.761317,574.203825 263.901747,601.063983 230.763072,601.063983 L60.2369281,601.063983 C27.1008124,601.063983 0.2386831,574.203026 0.2386831,541.070141 L0.2386831,60.7771242 Z M13.037037,69.5128999 L13.037037,533.595459 L277.962963,533.595459 L277.962963,69.5128999 L13.037037,69.5128999 Z" id="Combined-Shape" fill="#F5F5F5"></path>
+                    </g>
+                </g>
+                <ellipse id="Camera-surround" fill="url(#linearGradient-3)" cx="120.625514" cy="38.4633643" rx="5.75925926" ry="5.6749226"></ellipse>
+                <ellipse id="Camera" fill="#222222" cx="120.625514" cy="38.4633643" rx="3.19958848" ry="3.15273478"></ellipse>
+                <rect id="Speaker-surround" fill="url(#linearGradient-4)" x="139.823045" y="34.6800826" width="47.3539095" height="7.56656347" rx="3.78328173"></rect>
+                <rect id="Speaker" fill="#222222" x="141.742798" y="36.5717234" width="43.5144033" height="3.78328173" rx="1.89164087"></rect>
+                <rect id="Sensor-surround" fill="url(#linearGradient-4)" x="159.660494" y="16.3942208" width="7.67901235" height="7.56656347" rx="3.78328173"></rect>
+                <ellipse id="Sensor" fill="#222222" cx="163.5" cy="20.1775026" rx="2.55967078" ry="2.52218782"></ellipse>
+                <ellipse id="Home-button" stroke="url(#linearGradient-6)" stroke-width="2" fill="url(#linearGradient-5)" cx="163.5" cy="570.644995" rx="20.7572016" ry="20.4385965"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
